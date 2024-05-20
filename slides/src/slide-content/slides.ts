@@ -8,6 +8,13 @@ interface SlideContent {
   imageSrc?: string;
 } */
 
+export interface FirstSlideContent {
+  type: "first";
+  imageUrl: string;
+  title: string;
+  footer: string;
+}
+
 export interface TitleSlideContent {
   type: "title";
   title: string;
@@ -40,6 +47,13 @@ export interface Speaker {
 }
 
 export const slides: SlideContent[] = [
+  {
+    type: "first",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
+    title: "Les 20 minutes Typescript les plus rentables de votre vie !",
+    footer: "@AurelienLoyer / @DelphinAubin",
+  },
   {
     type: "speakers",
     speakers: [
@@ -77,6 +91,7 @@ export const slides: SlideContent[] = [
 ];
 
 export type SlideContent =
+  | FirstSlideContent
   | TitleSlideContent
   | ImageSlideContent
   | CodeSlideContent
