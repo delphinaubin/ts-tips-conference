@@ -1,12 +1,12 @@
 import "./style.css";
 import { SlideDeck } from "./slide-framework/slide-deck";
-import { Subtitle } from "./slide-framework/subtitle.block";
-import { Slide } from "./slide-framework/slide.block";
-import { Image } from "./slide-framework/image.block";
-import { TitleSlide } from "./title.slide";
-import { CodeSlide } from "./code.slide";
+import { Subtitle } from "./slide-framework/block/subtitle.block";
+import { Slide } from "./slide-framework/block/slide.block";
+import { Image } from "./slide-framework/block/image.block";
+import { TitleSlide } from "./slide/title.slide";
+import { CodeSlide } from "./slide/code.slide";
 import { getSlides } from "./slide-content/render-slides";
-import {CompiledCodeSlide} from "./compiled-code.slide";
+import { CompiledCodeSlide } from "./slide/compiled-code.slide";
 
 function getTitle(): string {
   if (window.innerWidth > 400) {
@@ -18,9 +18,9 @@ function getTitle(): string {
 
 const slide1 = new TitleSlide(getTitle(), "And more...");
 
-const slide2 = new Slide([
-  Subtitle.withText("This is the second slide..."),
-]).withTransition("none-in slide-out");
+const slide2 = new Slide([Subtitle.withText("This is the second slide...")]).withTransition(
+  "none-in slide-out",
+);
 
 const slide3 = new CodeSlide("test.code.ts", "Some code");
 
@@ -33,27 +33,17 @@ const slide4 = new Slide([
 
 const slide5 = new TitleSlide("Title 2", "And more...");
 
-const slide6 = new Slide([
-  Subtitle.withText("This is the second slide..."),
-]).withTransition("none-in slide-out");
+const slide6 = new Slide([Subtitle.withText("This is the second slide...")]).withTransition(
+  "none-in slide-out",
+);
 
 const otherSlides = getSlides();
 
 const slide7 = new TitleSlide("Title 3", "And more...");
 
-const enumSlide = new CompiledCodeSlide('enum.ts')
+const enumSlide = new CompiledCodeSlide("enum.ts");
 
-const slides = [
-  ...otherSlides,
-  enumSlide,
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  slide6,
-  slide7,
-];
+const slides = [...otherSlides, enumSlide, slide1, slide2, slide3, slide4, slide5, slide6, slide7];
 
 const summary = new Slide([
   Subtitle.withText("👇 Summary 👇"),
@@ -76,7 +66,7 @@ slideDeck.init();
 
 // 🚀 Encore mieux
 function getAllTitleSlidesTitle(slides: Slide[]): string[] {
-  return slides.filter(isTitleSlide).map(slide => slide.title);
+  return slides.filter(isTitleSlide).map((slide) => slide.title);
 }
 
 // TODO: move it to utils directory

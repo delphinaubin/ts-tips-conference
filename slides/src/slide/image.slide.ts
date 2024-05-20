@@ -1,6 +1,6 @@
-import { Slide } from "./slide-framework/slide.block";
-import { Title } from "./slide-framework/title.block";
-import { Image } from "./slide-framework/image.block";
+import { Slide } from "../slide-framework/block/slide.block";
+import { Title } from "../slide-framework/block/title.block";
+import { Image } from "../slide-framework/block/image.block";
 
 export class ImageSlide extends Slide {
   constructor(

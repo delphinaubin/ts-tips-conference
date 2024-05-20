@@ -1,16 +1,14 @@
-import { Speaker } from "../slide-content/slides";
-import { RenderBlock } from "./render-block";
+import "./speaker.block.css";
 
+import { Speaker } from "../../../slide-content/slides";
+import { RenderBlock } from "../../render-block";
 
 export class SpeakerBlock extends RenderBlock {
-
   constructor(public speaker: Speaker) {
     super([]);
   }
 
   override getHtmlElement(): HTMLElement {
-
-
     const speakerElement = document.createElement("div");
     speakerElement.classList.add("speaker");
     speakerElement.innerHTML = `

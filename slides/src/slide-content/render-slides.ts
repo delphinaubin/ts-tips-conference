@@ -1,8 +1,8 @@
 import { slides } from "./slides";
-import { TitleSlide } from "../title.slide";
-import { ImageSlide } from "../image.slide";
-import { CodeSlide } from "../code.slide";
-import { SpeakersSlide } from "../speakers.slide";
+import { TitleSlide } from "../slide/title.slide";
+import { ImageSlide } from "../slide/image.slide";
+import { CodeSlide } from "../slide/code.slide";
+import { SpeakersSlide } from "../slide/speakers.slide";
 
 export function getSlides() {
   return slides.map((slide) => {

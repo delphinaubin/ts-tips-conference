@@ -1,4 +1,4 @@
-import { RenderBlock } from "./render-block";
+import { RenderBlock } from "../render-block";
 
 export type SlideSingleTransition =
   | "none"

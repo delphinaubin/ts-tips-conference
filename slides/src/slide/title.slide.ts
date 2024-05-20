@@ -1,6 +1,6 @@
-import { Slide } from "./slide-framework/slide.block";
-import { Title } from "./slide-framework/title.block";
-import { Subtitle } from "./slide-framework/subtitle.block";
+import { Slide } from "../slide-framework/block/slide.block";
+import { Title } from "../slide-framework/block/title.block";
+import { Subtitle } from "../slide-framework/block/subtitle.block";
 
 export class TitleSlide extends Slide {
   constructor(

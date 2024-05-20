@@ -1,4 +1,4 @@
-import { RenderBlock } from "./render-block";
+import { RenderBlock } from "../render-block";
 
 export class Image extends RenderBlock {
   static withSrc(src: string): Image {

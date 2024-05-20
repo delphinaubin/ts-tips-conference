@@ -1,6 +1,6 @@
-import { Slide } from "./slide-framework/slide.block";
-import { Subtitle } from "./slide-framework/subtitle.block";
-import { CodeFromFile } from "./slide-framework/code-from-file.block";
+import { Slide } from "../slide-framework/block/slide.block";
+import { Subtitle } from "../slide-framework/block/subtitle.block";
+import { CodeFromFile } from "../slide-framework/block/code/code-from-file.block";
 
 export class CodeSlide extends Slide {
   constructor(

@@ -1,5 +1,5 @@
 import { Code } from "./code.block";
-import { fetchCode } from "../client/code.client";
+import { fetchCode } from "../../../api/code.api";
 
 export class CodeFromFile extends Code {
   static fromFile(fileName: string): CodeFromFile {

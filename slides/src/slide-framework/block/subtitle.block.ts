@@ -1,4 +1,4 @@
-import {RenderBlock} from "./render-block";
+import {RenderBlock} from "../render-block";
 
 export class Subtitle extends RenderBlock {
   static withText(text: string): Subtitle {

@@ -2,7 +2,7 @@ import "./monokai.css";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/blood.css";
 
-import { Slide } from "./slide.block";
+import { Slide } from "./block/slide.block";
 import Reveal from "reveal.js";
 import RevealHighlight from "reveal.js/plugin/highlight/highlight";
 

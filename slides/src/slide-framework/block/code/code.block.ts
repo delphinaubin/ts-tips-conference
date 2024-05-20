@@ -1,4 +1,4 @@
-import { RenderBlock } from "./render-block";
+import { RenderBlock } from "../../render-block";
 
 type CodeSingleLine = `${number}` | `${number}-${number}`;
 
