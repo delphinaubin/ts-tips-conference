@@ -1,0 +1,14 @@
+.title i {
+  font-style: normal;
+  background-color: var(--r-link-color);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+  padding: .4rem;
+  border-radius: 6px;
+}

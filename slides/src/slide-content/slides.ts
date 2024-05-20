@@ -51,7 +51,7 @@ export const slides: SlideContent[] = [
     type: "first",
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
-    title: "Les 20 minutes Typescript les plus rentables de votre vie !",
+    title: "The 20 most profitable typescript minutes of your life!",
     footer: "@AurelienLoyer / @DelphinAubin",
   },
   {
@@ -75,8 +75,33 @@ export const slides: SlideContent[] = [
   },
   {
     type: "title",
-    title: "And wait...",
-    subtitle: "There is more!",
+    title: "<i>Strictness</i> won't save you when the bullets fly",
+    // subtitle: "",
+  },
+  {
+    type: "title",
+    title: "Never say <i>never</i>",
+    // subtitle: "",
+  },
+  {
+    type: "title",
+    title: "He’s all <i>|</i> and no action",
+    // subtitle: "",
+  },
+  {
+    type: "title",
+    title: "<i>Infer</i> this mate",
+    // subtitle: "",
+  },
+  {
+    type: "title",
+    title: "A dash of <i>flavoring</i>",
+    // subtitle: "",
+  },
+  {
+    type: "title",
+    title: "Don't <i>overload</i> me with your problems, mate.",
+    // subtitle: "",
   },
   {
     type: "code",
