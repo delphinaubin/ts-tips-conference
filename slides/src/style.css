@@ -2,3 +2,14 @@
   padding: 2rem;
 }
 
+h5 i {
+  font-style: normal;
+  background-color: var(--r-link-color);
+  font-family: "Fira Code", monospace;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.4rem;
+  border-radius: 6px;
+  text-shadow: none;
+  text-transform: none;
+}

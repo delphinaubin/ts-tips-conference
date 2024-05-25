@@ -46,6 +46,17 @@ export interface Speaker {
   pictureUrl: string;
 }
 
+export interface LinksSlideContent {
+  type: "links";
+  title?: string;
+  links: Link[];
+}
+
+export interface Link {
+  label: string;
+  url: string;
+}
+
 export const slides: SlideContent[] = [
   {
     type: "first",
@@ -61,57 +72,60 @@ export const slides: SlideContent[] = [
         name: "Aurélien Loyer",
         twitter: "@AurelienLoyer",
         bio: "Software Engineering Leader @QIMA",
-        pictureUrl:
-          "https://s3.amazonaws.com/media-p.slid.es/uploads/637110/images/8938477/pasted-from-clipboard.png",
+        pictureUrl: "/public/aurelien-loyer.png",
       },
       {
         name: "Delphin Aubin",
         twitter: "@DelphinAubin",
         bio: "Software Engineering Leader @Zenika",
-        pictureUrl:
-          "https://media.licdn.com/dms/image/C5603AQHrKSQGMRCNcQ/profile-displayphoto-shrink_800_800/0/1562843077115?e=2147483647&v=beta&t=PtU608bOQDzZo3R9fPkkO-D_0SzvlDtbBuWBRD2fku0",
+        pictureUrl: "/public/delphin-aubin.jpeg",
       }
     ],
   },
+
+  /*
+  ** 🚀 Part.1 -------------------------
+  */
   {
     type: "title",
     title: "<i>Strictness</i> won't save you when the bullets fly",
-    // subtitle: "",
+    subtitle: "Chapter 1.",
   },
+
+  /*
+  ** 🚀 Part.2 -------------------------
+  */
+
+  // is slide
+  
+  /*
+  ** 🚀 Part.3 -------------------------
+  */
+
   {
     type: "title",
     title: "Never say <i>never</i>",
-    // subtitle: "",
+    subtitle: "Chapter 2.",
   },
   {
     type: "title",
-    title: "He’s all <i>|</i> and no action",
-    // subtitle: "",
+    title: "With <i>union</i> we stand",
+    subtitle: "Chapter 3.",
   },
   {
     type: "title",
-    title: "<i>Infer</i> this mate",
-    // subtitle: "",
+    title: "<i>Infer</i> this mate!",
+    subtitle: "Chapter 4.",
   },
   {
     type: "title",
     title: "A dash of <i>flavoring</i>",
-    // subtitle: "",
+    subtitle: "Chapter 5.",
   },
   {
     type: "title",
     title: "Don't <i>overload</i> me with your problems, mate.",
-    // subtitle: "",
-  },
-  {
-    type: "code",
-    title: "You can do that:",
-    fileName: "json-code-sample.code.ts",
-  },
-  {
-    type: "image",
-    imageSrc:
-      "https://wallpapers.com/images/hd/cool-picture-art-of-lion-rlst9ftvz1dvvn37.jpg",
+    subtitle: "Chapter 6.",
   },
 ];
 
@@ -121,3 +135,4 @@ export type SlideContent =
   | ImageSlideContent
   | CodeSlideContent
   | SpeakersSlideContent
+  | LinksSlideContent;

@@ -8,8 +8,8 @@ export class TitleSlide extends Slide {
     public readonly subTitle?: string,
   ) {
     super([
-      Title.withText(title),
       ...(subTitle ? [Subtitle.withText(subTitle)] : []),
+      Title.withText(title),
     ]);
   }
 }
