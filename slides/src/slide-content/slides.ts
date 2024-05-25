@@ -57,36 +57,6 @@ export interface Link {
   url: string;
 }
 
-export const slides: SlideContent[] = [
-  {
-    type: "first",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png",
-    title: "The 20 most profitable typescript minutes of your life!",
-    footer: "@AurelienLoyer / @DelphinAubin",
-  },
-  {
-    type: "speakers",
-    speakers: [
-      {
-        name: "Aurélien Loyer",
-        twitter: "@AurelienLoyer",
-        bio: "Software Engineering Leader @QIMA",
-        pictureUrl: "/public/aurelien-loyer.png",
-      },
-      {
-        name: "Delphin Aubin",
-        twitter: "@DelphinAubin",
-        bio: "Software Engineering Leader @Zenika",
-        pictureUrl: "/public/delphin-aubin.jpeg",
-      },
-    ],
-  },
-
-
-
-];
-
 export type SlideContent =
   | FirstSlideContent
   | TitleSlideContent
