@@ -1,4 +1,4 @@
-import {RenderBlock} from "../render-block";
+import { RenderBlock } from "../render-block";
 
 export class Subtitle extends RenderBlock {
   static withText(text: string): Subtitle {
@@ -10,8 +10,8 @@ export class Subtitle extends RenderBlock {
   }
 
   override getHtmlElement(): HTMLElement {
-    const element = document.createElement("h2");
-    element.innerText = this.text;
+    const element = document.createElement("h5");
+    element.innerHTML = this.text;
     return element;
   }
 }

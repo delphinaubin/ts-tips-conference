@@ -1,4 +1,6 @@
-import {RenderBlock} from "../render-block";
+import "./title.block.css";
+
+import { RenderBlock } from "../../render-block";
 
 export class Title extends RenderBlock {
   static withText(text: string): Title {
@@ -10,8 +12,9 @@ export class Title extends RenderBlock {
   }
 
   override getHtmlElement(): HTMLElement {
-    const element = document.createElement("h1");
-    element.innerText = this.text;
+    const element = document.createElement("h2");
+    element.classList.add("title");
+    element.innerHTML = this.text;
     return element;
   }
 }

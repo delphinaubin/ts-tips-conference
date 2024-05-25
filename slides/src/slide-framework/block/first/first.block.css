@@ -1,0 +1,25 @@
+.present > .first {
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+img.first-block__image {
+  max-height: 30vh;
+}
+
+.first-block__title {
+  font-size: 4rem!important;
+}
+
+.first-block__footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: right;
+}

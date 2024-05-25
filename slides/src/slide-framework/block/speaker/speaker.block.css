@@ -1,44 +1,44 @@
 .present > .speaker {
-    margin: 5rem 0;
+  margin: 5rem 0;
 }
 
 .speaker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .speaker__picture {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    margin-right: 1rem;
-    border: solid 1px;
-    background-size: cover;
-    background-position: center, center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: solid 1px;
+  background-size: cover;
+  background-position: center, center;
 }
 
 .speaker__info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 
-    align-items: self-start;
+  align-items: self-start;
 }
 
 .speaker__info-name {
-    font-weight: bold;
-    font-size: 3rem;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .speaker__info-twitter {
-    color: #e11c4c;
-    font-weight: bold;
+  color: var(--r-link-color);
+  font-weight: bold;
 }
 
 .speaker__info-bio {
-    font-weight: lighter;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+  font-weight: lighter;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
