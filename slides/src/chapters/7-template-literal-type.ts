@@ -12,4 +12,6 @@ const slidesContent: SlideContent[] = [
   },
 ];
 
-export const chapter7Slides = Chapter.withSlides(getSlides(slidesContent));
+export const chapter7Slides = Chapter.withSlides(getSlides(slidesContent)).withTransition(
+  "zoom-in slide-out",
+);

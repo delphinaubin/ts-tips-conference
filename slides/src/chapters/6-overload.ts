@@ -9,7 +9,7 @@ const slidesContent: SlideContent[] = [
     type: "title",
     title: "Don't <i>overload</i> me with your problems, mate.",
     subtitle: "Chapter 6.",
-  },
+  }
 ];
 
-export const chapter6Slides = Chapter.withSlides(getSlides(slidesContent));
+export const chapter6Slides = Chapter.withSlides(getSlides(slidesContent)).withTransition("slide-in zoom-out");

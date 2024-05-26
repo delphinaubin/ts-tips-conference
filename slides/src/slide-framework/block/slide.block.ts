@@ -1,6 +1,6 @@
 // @ts-strict-ignore
 import { RenderBlock } from "../render-block";
-import {ChapterComputationContext} from "../chapter-computation-context.type";
+import { ChapterComputationContext } from "../chapter-computation-context.type";
 
 export type SlideSingleTransition = "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
 

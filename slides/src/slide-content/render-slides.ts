@@ -5,8 +5,9 @@ import { CodeSlide } from "../slide/code.slide";
 import { SpeakersSlide } from "../slide/speakers.slide";
 import { FirstSlide } from "../slide/first.slide";
 import { LinksSlide } from "../slide/links.slide";
+import { Slide } from "../slide-framework/block/slide.block";
 
-export function getSlides(slides: SlideContent[]) {
+export function getSlides(slides: SlideContent[]): Slide[] {
   return slides.map((slide) => {
     switch (slide.type) {
       case "first":
