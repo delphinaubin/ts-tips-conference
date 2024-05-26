@@ -79,54 +79,12 @@ export const slides: SlideContent[] = [
         twitter: "@DelphinAubin",
         bio: "Software Engineering Leader @Zenika",
         pictureUrl: "/public/delphin-aubin.jpeg",
-      }
+      },
     ],
   },
 
-  /*
-  ** 🚀 Part.1 -------------------------
-  */
-  {
-    type: "title",
-    title: "<i>Strictness</i> won't save you when the bullets fly",
-    subtitle: "Chapter 1.",
-  },
 
-  /*
-  ** 🚀 Part.2 -------------------------
-  */
 
-  // is slide
-  
-  /*
-  ** 🚀 Part.3 -------------------------
-  */
-
-  {
-    type: "title",
-    title: "Never say <i>never</i>",
-    subtitle: "Chapter 2.",
-  },
-  {
-    type: "title",
-    title: "With <i>union</i> we stand",
-    subtitle: "Chapter 3.",
-  },
-  {
-    type: "title",
-    title: "<i>Infer</i> this mate!",
-    subtitle: "Chapter 4.",
-  },
-  {
-    type: "title",
-    title: "A dash of <i>flavoring</i>",
-    subtitle: "Chapter 5.",
-  },
-  {
-    type: "title",
-    title: "Don't <i>overload</i> me with your problems, mate.",
-    subtitle: "Chapter 6.",
-  },
 ];
 
 export type SlideContent =

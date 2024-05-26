@@ -3,7 +3,7 @@
 import { CodeFromText } from "../slide-framework/block/code/code-from-text.block";
 import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
-import { ChapterGroup } from "../slide/chapter-group.slide";
+import { Chapter } from "../slide/chapter.slide";
 
 function getTitle(): string {
   if (window.innerWidth > 400) {
@@ -27,4 +27,4 @@ const pluginSlide = new Slide([
   }`),
 ]);
 
-export const chapter1Slide = ChapterGroup.withSlides([pluginSlide]);
+export const chapter1Slide = Chapter.withSlides([pluginSlide]);
