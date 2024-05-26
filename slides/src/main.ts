@@ -1,8 +1,8 @@
 import "./style.css";
 import { SlideDeck } from "./slide-framework/slide-deck";
 import { chapter2Slide } from "./chapters/2-user-defined-type-guards";
+import { firstSlide, linksSlide, speakersSlide, thanksSlide } from "./chapters/99-other";
 import { chapter1Slide } from "./chapters/1-typescript-strict-plugin";
-import { linksSlide, thanksSlide } from "./chapters/99-other";
 import { computeSummarySlide } from "./chapters/summary";
 import { chapter3Slides } from "./chapters/3-discriminated-union-type";
 import { chapter4Slides } from "./chapters/4-never";
@@ -25,7 +25,14 @@ const chapterSlides = [
 ];
 
 const slideDeck = new SlideDeck(
-  [...chapterSlides, computeSummarySlide(chapterSlides), linksSlide, thanksSlide],
+  [
+    firstSlide,
+    speakersSlide,
+    ...chapterSlides,
+    computeSummarySlide(chapterSlides),
+    linksSlide,
+    thanksSlide,
+  ],
   "slide-container",
 );
 

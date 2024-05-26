@@ -1,7 +1,32 @@
 import { Image } from "../slide-framework/block/image.block";
 import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
+import { FirstSlide } from "../slide/first.slide";
 import { LinksSlide } from "../slide/links.slide";
+import { SpeakersSlide } from "../slide/speakers.slide";
+
+export const firstSlide = new FirstSlide(
+    "/public/typescript-logo.png",
+    "The 20 most profitable typescript minutes of your life!",
+    "@AurelienLoyer / @DelphinAubin",
+);
+
+export const speakersSlide = new SpeakersSlide(
+    [
+        {
+            name: "Aurélien Loyer",
+            twitter: "@AurelienLoyer",
+            bio: "Software Engineering Leader @QIMA",
+            pictureUrl: "/public/aurelien-loyer.png",
+        },
+        {
+            name: "Delphin Aubin",
+            twitter: "@DelphinAubin",
+            bio: "Software Engineering Leader @Zenika",
+            pictureUrl: "/public/delphin-aubin.jpeg",
+        }
+    ]
+)
 
 export const linksSlide = new LinksSlide(
     {
