@@ -13,3 +13,7 @@ h5 i {
   text-shadow: none;
   text-transform: none;
 }
+
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.2!important;
+}

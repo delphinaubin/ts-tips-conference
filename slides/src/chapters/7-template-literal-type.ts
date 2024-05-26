@@ -1,6 +1,7 @@
 import { Chapter } from "../slide/chapter.slide";
 import { getSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 // TODO DAU gérer le truc
 
@@ -9,6 +10,17 @@ const slidesContent: SlideContent[] = [
     type: "title",
     title: "A quick zoom on <i>template literal</i> type",
     subtitle: "Chapter 7.",
+  },
+  {
+    type: "code",
+    title: "Let's validate emails",
+    fileName: "template-literal-email.ts",
+    steps: CodeStepsBuilder.createSteps()
+      .addStep("1-2")
+      .addStep("1-2,5")
+      .addStep("1-2,6")
+      .addStep("1-2,7")
+      .build(),
   },
 ];
 

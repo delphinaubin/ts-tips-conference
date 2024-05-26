@@ -5,7 +5,6 @@ import { RenderBlock } from "../../render-block";
 import { LinksSlideContent } from "../../../slide-content/slides";
 
 export class Links extends RenderBlock {
-
   constructor(private readonly linksSlideContent: Omit<LinksSlideContent, "type">) {
     super([]);
   }

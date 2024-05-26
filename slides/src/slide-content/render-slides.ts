@@ -6,6 +6,7 @@ import { SpeakersSlide } from "../slide/speakers.slide";
 import { FirstSlide } from "../slide/first.slide";
 import { LinksSlide } from "../slide/links.slide";
 import { Slide } from "../slide-framework/block/slide.block";
+import { CompiledCodeSlide } from "../slide/compiled-code.slide";
 
 export function getSlides(slides: SlideContent[]): Slide[] {
   return slides.map((slide) => {
@@ -17,11 +18,13 @@ export function getSlides(slides: SlideContent[]): Slide[] {
       case "image":
         return new ImageSlide(slide.imageSrc, slide.title);
       case "code":
-        return new CodeSlide(slide.fileName, slide.title);
+        return new CodeSlide(slide.fileName, slide.title, slide.steps, slide.language);
       case "speakers":
         return new SpeakersSlide(slide.speakers);
       case "links":
         return new LinksSlide(slide);
+      case "compiledCode":
+        return new CompiledCodeSlide(slide.fileName, slide.title);
     }
   });
 }

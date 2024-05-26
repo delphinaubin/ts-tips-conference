@@ -22,7 +22,7 @@ export const speakersSlide = new SpeakersSlide(
         {
             name: "Delphin Aubin",
             twitter: "@DelphinAubin",
-            bio: "Software Engineering Leader @Zenika",
+            bio: "Javascript expert @Zenika",
             pictureUrl: "/public/delphin-aubin.jpeg",
         }
     ]
