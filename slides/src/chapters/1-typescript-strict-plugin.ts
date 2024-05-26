@@ -3,10 +3,11 @@ import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
 import { Chapter } from "../slide/chapter.slide";
 import { TitleSlide } from "../slide/title.slide";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const pluginSlide0 = new TitleSlide(
   "<i>Strictness</i> won't save you when the bullets fly",
-  "Chapter 1."
+  "Chapter 1.",
 );
 
 function getPluginSlide1Title(): string {
@@ -17,18 +18,28 @@ function getPluginSlide1Title(): string {
 
 const pluginSlide1 = new Slide([
   Subtitle.withText(getPluginSlide1Title()),
-  Subtitle.withText('<br>'),
-  new CodeFromText(`{
-    "compilerOptions": {
-      ...
-      "strict": false,
-      "plugins": [
-         {
-          "name": "typescript-strict-plugin"
-         }
-      ]
-    }
-  }`),
+  Subtitle.withText("<br>"),
+  new CodeFromText(`
+/* tsconfig.json */
+{
+  "compilerOptions": {
+    ...
+    "strict": false,
+    "plugins": [
+       {
+        "name": "typescript-strict-plugin"
+       }
+    ]
+  }
+}`)
+    .withLanguage("json")
+    .withSteps(
+      CodeStepsBuilder.createSteps()
+        .addStep("1-3,11-12")
+        .addStep("1-3,5,11-12")
+        .addStep("1-3,5-12")
+        .build(),
+    ),
 ]);
 
 export const chapter1Slide = Chapter.withSlides([pluginSlide0, pluginSlide1]);

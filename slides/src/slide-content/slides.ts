@@ -8,6 +8,8 @@ interface SlideContent {
   imageSrc?: string;
 } */
 
+import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
+
 export interface FirstSlideContent {
   type: "first";
   imageUrl: string;
@@ -23,7 +25,15 @@ export interface TitleSlideContent {
 
 export interface CodeSlideContent {
   type: "code";
-  title: string;
+  title?: string;
+  fileName: string;
+  steps?: CodeSteps;
+  language?: CodeLanguage;
+}
+
+export interface CompiledCodeSlideContent {
+  type: "compiledCode";
+  title?: string;
   fileName: string;
 }
 
@@ -63,4 +73,5 @@ export type SlideContent =
   | ImageSlideContent
   | CodeSlideContent
   | SpeakersSlideContent
-  | LinksSlideContent;
+  | LinksSlideContent
+  | CompiledCodeSlideContent;

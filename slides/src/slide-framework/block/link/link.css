@@ -1,0 +1,16 @@
+a.link[target=blank]::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -40px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  mask: url("./external-link.icon.svg");
+  background-color: var(--r-link-color);
+  transition: background-color 0.15s ease;
+}
+
+a.link[target=blank]:hover::after {
+  background-color: var(--r-link-color-hover);
+}

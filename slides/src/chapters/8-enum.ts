@@ -9,6 +9,14 @@ const slidesContent: SlideContent[] = [
     title: "Find a title for  <i>enum</i> and union types",
     subtitle: "Chapter 8.",
   },
+  {
+    type: "code",
+    fileName: "enum.ts",
+  },
+  {
+    type: "compiledCode",
+    fileName: "enum.ts",
+  },
 ];
 
 export const chapter8Slides = Chapter.withSlides([
