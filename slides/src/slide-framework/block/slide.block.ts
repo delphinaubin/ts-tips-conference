@@ -1,3 +1,4 @@
+// @ts-strict-ignore
 import { RenderBlock } from "../render-block";
 import {ChapterComputationContext} from "../chapter-computation-context.type";
 
@@ -9,8 +10,8 @@ export type SlideTransition =
 
 const chapterAndSlideIndexRegexp = /#\/([0-9])(\/[0-9])?/;
 
-type SlideIndex = number;
-type ChapterIndex = number;
+export type SlideIndex = number;
+export type ChapterIndex = number;
 
 export class Slide extends RenderBlock {
   public index: SlideIndex = 0;
