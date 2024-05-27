@@ -14,6 +14,8 @@ const pluginSlide0 = new TitleSlide(
 function getPluginSlide1Title(): string {
   if (window.innerWidth > 400) {
     return "<code>typescript-strict-plugin</code> FTW!";
+  } else if (window.innerWidth < 400) {
+    return "<code>typescript-strict-plugin</code>";
   }
 }
 

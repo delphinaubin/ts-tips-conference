@@ -1,3 +1,6 @@
+import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
+import { Link, Speaker } from "./models";
+
 /*
 // Un comment to start the presentation
 interface SlideContent {
@@ -8,7 +11,6 @@ interface SlideContent {
   imageSrc?: string;
 } */
 
-import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
 export interface FirstSlideContent {
   type: "first";
   imageUrl: string;
@@ -42,34 +44,28 @@ export interface ImageSlideContent {
   imageSrc: string;
 }
 
+export interface GifSlideContent {
+  type: "gif";
+  title?: string;
+  gifSrc: string;
+}
+
 export interface SpeakersSlideContent {
   type: "speakers";
   title?: string;
   speakers: Speaker[];
 }
-
-export interface Speaker {
-  name: string;
-  twitter: string;
-  bio: string;
-  pictureUrl: string;
-}
-
 export interface LinksSlideContent {
   type: "links";
   title?: string;
   links: Link[];
 }
 
-export interface Link {
-  label: string;
-  url: string;
-}
-
 export type SlideContent =
   | FirstSlideContent
   | TitleSlideContent
   | ImageSlideContent
+  | GifSlideContent // <- to delete for never case
   | CodeSlideContent
   | SpeakersSlideContent
   | LinksSlideContent

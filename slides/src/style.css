@@ -15,5 +15,5 @@ h5 i {
 }
 
 .reveal .hljs.has-highlights tr:not(.highlight-line) {
-  opacity: 0.2!important;
+  opacity: 0.1!important;
 }
