@@ -1,3 +1,4 @@
+// @ts-strict-ignore
 import { CodeFromText } from "../slide-framework/block/code/code-from-text.block";
 import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";

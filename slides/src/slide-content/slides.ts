@@ -9,7 +9,6 @@ interface SlideContent {
 } */
 
 import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
-
 export interface FirstSlideContent {
   type: "first";
   imageUrl: string;
