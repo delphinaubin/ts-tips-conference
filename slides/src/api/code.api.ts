@@ -1,17 +1,18 @@
 import axios from "axios";
 
-interface Compiled {
+export interface Compiled {
   compiled: { outputText: string; diagnostics: unknown[] };
 }
 
-interface NotCompiled {
+export interface NotCompiled {
   code: string;
 }
 
 type Code = Compiled | NotCompiled;
 
-export async function fetchCode(file: string, output: "js"): Promise<Compiled>;
-export async function fetchCode(file: string, output: "ts"): Promise<NotCompiled>;
+// TODO: to remove before the presentation
+// export async function fetchCode(file: string, output: "js"): Promise<Compiled>;
+// export async function fetchCode(file: string, output: "ts"): Promise<NotCompiled>;
 export async function fetchCode(file: string, output: "js" | "ts"): Promise<Code> {
   const url = new URL("http://localhost:3000/code");
   url.searchParams.set("fileName", file);
