@@ -3,7 +3,7 @@ import { SlideDeck } from "./slide-framework/slide-deck";
 import { chapter2Slide } from "./chapters/2-user-defined-type-guards";
 import { firstSlide, linksSlide, speakersSlide, thanksSlide } from "./chapters/99-other";
 import { chapter1Slide } from "./chapters/1-typescript-strict-plugin";
-import { computeSummarySlide } from "./chapters/summary";
+import { computeSummarySlide } from "./utils/summary";
 import { chapter3Slides } from "./chapters/3-discriminated-union-type";
 import { chapter4Slides } from "./chapters/4-never";
 import { chapter5Slides } from "./chapters/5-flavoring";
