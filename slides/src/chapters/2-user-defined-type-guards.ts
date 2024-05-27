@@ -38,8 +38,6 @@ const assertsSampleSlide = new Slide([
     ),
 ]);
 
-// TODO ALO: Fix summary à cause des chapters
-
 const featureSlide = new TsFeatureSlide();
 
 export const chapter2Slide = Chapter.withSlides([titleSlide, isSampleSlide, assertsSampleSlide, featureSlide]);
