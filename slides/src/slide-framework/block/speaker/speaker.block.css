@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-
+  width: 24rem;
   align-items: self-start;
 }
 
@@ -39,6 +39,6 @@
 
 .speaker__info-bio {
   font-weight: lighter;
-  margin-top: 1rem;
+  margin-top: .5rem;
   font-size: 1.5rem;
 }

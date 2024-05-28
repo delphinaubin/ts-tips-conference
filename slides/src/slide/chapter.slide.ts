@@ -15,7 +15,7 @@ export class Chapter extends Slide {
   getSlides(): Slide[] {
     assertBlocksAreSlides(this.children);
 
-    // @ts-ignore
+    // // @ts-ignore
     return this.children;
   }
 
@@ -24,7 +24,7 @@ export class Chapter extends Slide {
   }
 }
 
-function assertBlocksAreSlides(blocks: RenderBlock[]): void {
+function assertBlocksAreSlides(blocks: RenderBlock[]): asserts blocks is Slide[] {
   if (!blocks.every((block) => block instanceof Slide)) {
     throw new Error("All given blocks must be slides");
   }

@@ -1,3 +1,4 @@
+// @ts-strict-ignore
 import { Code } from "./code.block";
 import { fetchCode } from "../../../api/code.api";
 
@@ -12,6 +13,7 @@ export class CompiledCodeFromFile extends Code {
 
   override async getCode() {
     const fileContent = await fetchCode(this.fileName, "js");
-    return fileContent.compiled.outputText;
+
+    return fileContent['compiled']['outputText'];
   }
 }

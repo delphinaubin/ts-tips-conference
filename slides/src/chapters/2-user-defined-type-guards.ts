@@ -4,21 +4,40 @@ import { Subtitle } from "../slide-framework/block/subtitle.block";
 import { TitleSlide } from "../slide/title.slide";
 import { Chapter } from "../slide/chapter.slide";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const titleSlide = new TitleSlide(
-  "<i>is</i> won't save you when the bullets fly",
+  "Get your <i>Type Guards</i> in place, or you will play with fire.",
   "Chapter 2.",
 ).withTransition("none-in slide-out");
 
-const codeSampleSlide = new Slide([
-  Subtitle.withText("<code>is<code> (User-Defined Type Guards)"), // TODO: Challenge this title with our friend GPT
+const isSampleSlide = new Slide([
+  Subtitle.withText("<i>is</i> User-Defined Type Guards"),
   Subtitle.withText("<br>"),
   new CodeFromFile("is.ts"),
 ]);
 
-// TODO ALO: Fix summary à cause des chapters
-// TODO ALO: Ajouter slide sur asserts cf chapter.slide.ts
+/**
+ * @see chapter.slide.ts
+ * With TS 3.7
+ */
+const assertsSampleSlide = new Slide([
+  Subtitle.withText("<code>Assertion<code> signatures"),
+  Subtitle.withText("<br>"),
+  new CodeFromFile("asserts.ts")
+    .withLanguage("typescript")
+    .withSteps(
+      CodeStepsBuilder.createSteps()
+        .addStep("1-3")
+        .addStep("5,9")
+        .addStep("5-9")
+        .addStep("5-9,11,16")
+        .addStep("5-9,11,12,16")
+        .addStep("5-9,11-16")
+        .build(),
+    ),
+]);
 
 const featureSlide = new TsFeatureSlide();
 
-export const chapter2Slide = Chapter.withSlides([titleSlide, codeSampleSlide, featureSlide]);
+export const chapter2Slide = Chapter.withSlides([titleSlide, isSampleSlide, assertsSampleSlide, featureSlide]);

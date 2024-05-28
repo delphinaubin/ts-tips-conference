@@ -1,6 +1,6 @@
 import "./monokai.css";
 import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/blood.css";
+import "reveal.js/dist/theme/white.css";
 
 import { Slide } from "./block/slide.block";
 import Reveal from "reveal.js";

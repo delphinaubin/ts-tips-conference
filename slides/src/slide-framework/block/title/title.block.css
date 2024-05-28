@@ -8,14 +8,6 @@ h2.title {
 .title i {
   font-style: normal;
   background-color: var(--r-link-color);
-  /* font-family:
-    ui-monospace,
-    SFMono-Regular,
-    SF Mono,
-    Menlo,
-    Consolas,
-    Liberation Mono,
-    monospace; */
   font-family: "Fira Code", monospace;
   font-weight: normal;
   font-style: normal;
@@ -23,4 +15,5 @@ h2.title {
   border-radius: 6px;
   text-shadow: none;
   text-transform: none;
+  color: white;
 }
