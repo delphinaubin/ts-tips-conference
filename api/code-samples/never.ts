@@ -1,40 +1,5 @@
-type NetworkState =
-    | NetworkLoadingState
-    | NetworkFailedState
-    | NetworkSuccessState;
+type a = { a: string, b: never };
+type b = { b: string, a: never };
+type c = a | b;
 
-
-function logger(s: NetworkState): string { // ❌ | undefined
-    switch (s.state) {
-        case "failed":
-            return `failed with code ${s.code}`;
-        case "success":
-            return "got response";
-    }
-}
-
-function logger(s: NetworkState): string { // ✅
-    switch (s.state) {
-        case "failed":
-            return `failed with code ${s.code}`;
-        case "success":
-            return "got response";
-        default:
-            throw new Error("Unexpected object: " + x); // 👍
-    }
-}
-
-function assertNever(x: never): never {
-    throw new Error("Unexpected object: " + x);
-}
-
-function logger(s: NetworkState): string {
-    switch (s.state) {
-        // ...
-        case "loading":
-            return "waiting response";
-        default:
-            // // Argument of type 'NetworkLoadingState' is not assignable to parameter of type 'never'.
-            return assertNever(s); // 🫶
-    }
-}
+const toto: c = { a: "a", b: "b" };

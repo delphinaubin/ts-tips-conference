@@ -1,0 +1,15 @@
+.slide-resume h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.slide-resume li::marker {
+  color: var(--r-link-color);
+}
+
+.slide-resume li i {
+  background-color: var(--r-link-color);
+  padding: 0.4rem;
+  border-radius: 6px;
+  color: white;
+}

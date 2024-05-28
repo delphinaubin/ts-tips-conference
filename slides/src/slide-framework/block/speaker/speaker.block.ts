@@ -1,7 +1,7 @@
 import "./speaker.block.css";
 
-import { Speaker } from "../../../slide-content/slides";
 import { RenderBlock } from "../../render-block";
+import { Speaker } from "../../../slide-content/models";
 
 export class SpeakerBlock extends RenderBlock {
   constructor(public speaker: Speaker) {

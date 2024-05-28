@@ -7,12 +7,12 @@ import { TsFeatureSlide } from "../slide/ts-feature.slide";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const titleSlide = new TitleSlide(
-  "<i>Type Guards</i> won't save you when the bullets fly", // TODO: ALO ?? DAU Challenge this title with our friend GPT
+  "Get your <i>Type Guards</i> in place, or you will play with fire.",
   "Chapter 2.",
 ).withTransition("none-in slide-out");
 
 const isSampleSlide = new Slide([
-  Subtitle.withText("<code>is<code> - User-Defined Type Guards"),
+  Subtitle.withText("<i>is</i> User-Defined Type Guards"),
   Subtitle.withText("<br>"),
   new CodeFromFile("is.ts"),
 ]);

@@ -1,4 +1,5 @@
 import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
+import { SlideTransition } from "../slide-framework/block/slide.block";
 import { Link, Speaker } from "./models";
 
 /*
@@ -15,7 +16,7 @@ export interface FirstSlideContent {
   type: "first";
   imageUrl: string;
   title: string;
-  footer: string;
+  backgroundImage?: string;
 }
 
 export interface TitleSlideContent {
@@ -61,12 +62,20 @@ export interface LinksSlideContent {
   links: Link[];
 }
 
-export type SlideContent =
+export interface ResumeSlideContent {
+  type: "resume";
+  title?: string;
+  bullets: string[];
+}
+
+export type SlideContent = (
   | FirstSlideContent
   | TitleSlideContent
   | ImageSlideContent
-  | GifSlideContent // <- to delete for never case
+  | GifSlideContent
   | CodeSlideContent
   | SpeakersSlideContent
   | LinksSlideContent
-  | CompiledCodeSlideContent;
+  | ResumeSlideContent
+  | CompiledCodeSlideContent
+) & { transition?: SlideTransition };

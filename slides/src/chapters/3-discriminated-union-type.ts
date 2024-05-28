@@ -34,14 +34,22 @@ const slidesContent: SlideContent[] = [
       .build(),
   },
   {
+    type: "resume",
+    title: "Discriminated Union Type",
+    bullets: [
+      `Improved Type Safety`,
+      `Enhanced Autocompletion`,
+    ],
+  },
+  {
     type: "title",
     title: "<i>// TODO:</i> Aurel, vu que tu ne lis pas tes mails, je te mets un rappel ici: <br> <br> Slide GIF à fixer 🙏🏼",
   },
   // // TODO: Aurel - Le slide qui ne marche pas 👇
-  // {
-  //   type: "gif", 
-  //   imageSrc: "/public/tada.gif"
-  // }
+  {
+    type: "gif", 
+    gifSrc: "/public/tada.gif"
+  }
 ];
 
 export const chapter3Slides = Chapter.withSlides([...getSlides(slidesContent), new TsFeatureSlide()]);

@@ -14,7 +14,6 @@ const slidesContent: SlideContent[] = [
   },
   {
     type: "code",
-    title: "never or the unreachable code",
     fileName: "never.ts",
     steps: CodeStepsBuilder.createSteps()
       .addStep("1-4")
@@ -24,6 +23,14 @@ const slidesContent: SlideContent[] = [
       .addStep("27-29,31-36,39-40")
       .addStep("27-29,31-40")
       .build(),
+  },
+  {
+    type: "resume",
+    title: "<i>never</i> is useful to...",
+    bullets: [
+      `Ensure unreachable`, // (code // function)
+      `"Disable" some value in a union type`,
+    ],
   },
 ];
 

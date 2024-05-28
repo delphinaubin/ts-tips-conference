@@ -2,9 +2,14 @@
   padding: 2rem;
 }
 
+h5 {
+  text-transform: none;
+}
+
 h5 i {
   font-style: normal;
   background-color: var(--r-link-color);
+  color: white;
   font-family: "Fira Code", monospace;
   font-weight: normal;
   font-style: normal;
