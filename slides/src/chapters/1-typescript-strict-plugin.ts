@@ -14,7 +14,7 @@ const pluginSlide0 = new TitleSlide(
 
 function getPluginSlide1Title(): string {
   if (window.innerWidth > 400) {
-    return "<code>typescript-strict-plugin</code> FTW!";
+    return "<code>typescript-strict-plugin</code> 🙌";
   } else if (window.innerWidth < 400) {
     return "<code>typescript-strict-plugin</code>";
   }
@@ -52,7 +52,7 @@ const pluginSlide2 = new Slide([
     `{
   "scripts": {
     ...,
-    "typecheck": "tsc && tsc-strict",
+    "typecheck": "tsc && tsc-strict", // Can be added to CI
   },
 }`
   ),
