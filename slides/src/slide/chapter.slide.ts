@@ -15,7 +15,7 @@ export class Chapter extends Slide {
   getSlides(): Slide[] {
     assertBlocksAreSlides(this.children);
 
-    // // @ts-ignore
+    // // @ts-ignore - TS doesn't understand that the assertion above guarantees that children is an array of slides
     return this.children;
   }
 
