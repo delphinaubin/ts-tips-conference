@@ -1,14 +1,10 @@
-function doSomething(input: string | number) {
-    console.log(input.toUpperCase()); // ❌
-}
-
-function assertString(input: any): asserts input is string {
-    if (typeof input !== 'string') {
-        throw new Error('Input must be a string!');
+function assertString(v: any): asserts v is string {
+    if (typeof v !== 'string') {
+        throw new Error(`${v} must be a string!`);
     }
 }
 
-function doSomethingV2(input: string | number) {
+function logUpperCaseValue(input: any) {
     assertString(input); // 🙏🏼
 
     // input's type is just 'string' here

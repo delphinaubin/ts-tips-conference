@@ -64,7 +64,7 @@ export interface LinksSlideContent {
 
 export interface ResumeSlideContent {
   type: "resume";
-  title?: string;
+  title: string;
   bullets: string[];
 }
 

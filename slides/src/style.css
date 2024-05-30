@@ -6,7 +6,7 @@ h5 {
   text-transform: none;
 }
 
-h5 i {
+h5 i, h3 i {
   font-style: normal;
   background-color: var(--r-link-color);
   color: white;

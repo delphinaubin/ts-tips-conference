@@ -11,7 +11,7 @@ interface TsFeature {
 const featuresByChapters: TsFeature[] = [
   {
     index: 1,
-    featureName: "Not the right chapter",
+    featureName: `<i>404</i> Documentation not found`,
     tsDocLink:
       "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates",
   },

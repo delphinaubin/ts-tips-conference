@@ -1,3 +1,4 @@
+// @ts-strict-ignore
 import { RenderBlock } from "../render-block";
 import { ChapterComputationContext } from "../chapter-computation-context.type";
 

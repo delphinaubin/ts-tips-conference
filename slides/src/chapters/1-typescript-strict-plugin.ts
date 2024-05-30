@@ -14,7 +14,7 @@ const pluginSlide0 = new TitleSlide(
 
 function getPluginSlide1Title(): string {
   if (window.innerWidth > 400) {
-    return "<code>typescript-strict-plugin</code> FTW!";
+    return "<code>typescript-strict-plugin</code> 🙌";
   } else if (window.innerWidth < 400) {
     return "<code>typescript-strict-plugin</code>";
   }
@@ -52,7 +52,7 @@ const pluginSlide2 = new Slide([
     `{
   "scripts": {
     ...,
-    "typecheck": "tsc && tsc-strict",
+    "typecheck": "tsc && tsc-strict", // Can be added to CI
   },
 }`
   ),
@@ -61,10 +61,16 @@ const pluginSlide2 = new Slide([
 const resumeSlide = new ResumeSlide({
   title: "TypeScript Strict Plugin",
   bullets: [
-    "🚀 Progressive strictness",
-    "👨‍🚀 No more excuses to be strict",
-    "🔥 Easy detection of files with strict error",
+    "Progressive strictness",
+    "No more excuses to be strict",
+    "Easy detection of files with strict error",
   ],
 });
 
-export const chapter1Slide = Chapter.withSlides([pluginSlide0, pluginSlide1, pluginSlide2, resumeSlide]);
+// TODO: blank slide to challenge
+const blankSlide = new ResumeSlide({
+  title: "",
+  bullets: [],
+});
+
+export const chapter1Slide = Chapter.withSlides([pluginSlide0, pluginSlide1, pluginSlide2, resumeSlide, blankSlide]);

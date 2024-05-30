@@ -1,7 +1,12 @@
-function getAllTitleSlidesTitle(slides: Slide[]): string[] {
-    return slides.filter(isTitleSlide).map((slide: TitleSlide) => slide.title);
+function isNumber(value: any): value is number {
+    return typeof value === 'number';
 }
 
-function isTitleSlide(slide: Slide): slide is TitleSlide {
-    return slide instanceof TitleSlide;
+// ✨ Usefull for if condition
+if(isNumber(value)) {
+    // ...
 }
+
+// ✨ Or for filter condition 
+const values: (string | number)[] = ['a', 1, 'b', 2];
+const numbers = values.filter(isNumber);

@@ -42,12 +42,13 @@ const slidesContent: SlideContent[] = [
     ],
   },
   {
-    type: "title",
-    title: "<i>// TODO:</i> Aurel, vu que tu ne lis pas tes mails, je te mets un rappel ici: <br> <br> Slide GIF à fixer 🙏🏼",
+    type: "first",
+    title: `<h3><i>// TODO:</i> Aurel, vu que tu ne lis pas tes mails, je te mets un rappel ici: <br> <br> Slide GIF à fixer 🙏🏼</h3>`,
+    imageUrl: "",
   },
   // // TODO: Aurel - Le slide qui ne marche pas 👇
   {
-    type: "gif", 
+    type: "gif",
     gifSrc: "/public/tada.gif"
   }
 ];

@@ -1,4 +1,4 @@
-import { Speaker } from "../slide-content/slides";
+import { Speaker } from "../slide-content/models";
 import { Slide } from "../slide-framework/block/slide.block";
 import { SpeakerBlock } from "../slide-framework/block/speaker/speaker.block";
 

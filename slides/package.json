@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "tsc-strict": "tsc-strict",
     "update-strict-comments": "update-strict-comments",
-    "build": "tsc && vite build",
+    "build": "tsc && tsc-strict && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
