@@ -13,7 +13,6 @@ import { chapter8Slides } from "./chapters/8-enum";
 import { chapter98Slides } from "./chapters/98-infer";
 
 const chapterSlides = [
-  chapter1Slide,
   chapter2Slide,
   chapter3Slides,
   chapter4Slides,
@@ -28,8 +27,9 @@ const slideDeck = new SlideDeck(
   [
     firstSlide,
     speakersSlide,
+    chapter1Slide,
+    computeSummarySlide([chapter1Slide, ...chapterSlides]),
     ...chapterSlides,
-    computeSummarySlide(chapterSlides),
     linksSlide,
     thanksSlide,
   ],

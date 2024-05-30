@@ -4,10 +4,10 @@ function assertString(v: any): asserts v is string {
     }
 }
 
-describe.each([true, 42, '🦄', {}, undefined])(
-    'should not throw an error if not a string %s',
+describe.each([true, 42, {}, undefined])(
+    'should throw an error',
     (value: unknown): void => {
-        it(`should return ${value}`, (): void => {
+        it(`with ${value} as input`, (): void => {
             expect((): void => {
                 assertString(value);
             }).not.toThrow('Input must be a string!');

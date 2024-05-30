@@ -9,7 +9,7 @@ import { Image } from "../slide-framework/block/image.block";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const titleSlide = new TitleSlide(
-  "Get your <i>Type Guards</i> in place, or you will play with fire.",
+  "Get your <i>Type Guards</i> in place",
   "Chapter 2.",
 ).withTransition("none-in slide-out");
 
