@@ -3,10 +3,11 @@ function isNumber(value: any): value is number {
 }
 
 // ✨ Usefull for if condition
-if(isNumber(value)) {
+if (isNumber(value)) {
     // ...
 }
 
 // ✨ Or for filter condition 
 const values: (string | number)[] = ['a', 1, 'b', 2];
-const numbers = values.filter(isNumber);
+// 👌 number[]
+const numbers: number[] = values.filter(isNumber); 

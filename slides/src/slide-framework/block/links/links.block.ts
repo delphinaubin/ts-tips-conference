@@ -2,27 +2,21 @@
 import "./links.block.css";
 
 import { RenderBlock } from "../../render-block";
-import { LinksSlideContent } from "../../../slide-content/slides";
+import { LinkItem } from "../../../slide-content/models";
 
 export class Links extends RenderBlock {
-  constructor(private readonly linksSlideContent: Omit<LinksSlideContent, "type">) {
+  constructor(private readonly links: LinkItem[]) {
     super([]);
   }
 
   override getHtmlElement(): HTMLElement {
     const element = document.createElement("div");
-    element.classList.add("slide-links");
-
-    const title = document.createElement("h2");
-    title.classList.add("title");
-    title.innerText = this.linksSlideContent.title;
-
-    element.appendChild(title);
+    element.classList.add("links");
 
     const list = document.createElement("ul");
     list.classList.add("list");
 
-    this.linksSlideContent.links.forEach((link) => {
+    this.links.forEach((link) => {
       const listItem = document.createElement("li");
       listItem.classList.add("list__item");
 

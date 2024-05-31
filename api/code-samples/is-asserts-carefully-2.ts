@@ -1,4 +1,4 @@
-function assertString(v: any): asserts v is number { // 😰
+function assertString(v: unknown): asserts v is number { // 😰
     if (typeof v !== 'string') {
         throw new Error('Input must be a string!');
     }

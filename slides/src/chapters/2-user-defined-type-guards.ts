@@ -53,7 +53,6 @@ const trustMeSlide3 = new Slide([
   Image.withSrc("/public/trust-me.webp"),
 ]).withTransition('auto-animate');
 
-// TODO: check if we keep this slide
 const trustMeSlide4 = new Slide([
   Subtitle.withText("But to use carefully..."),
   new CodeFromFile("is-asserts-carefully-3.ts")

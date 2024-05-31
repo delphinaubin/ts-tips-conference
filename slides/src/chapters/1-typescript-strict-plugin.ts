@@ -67,10 +67,6 @@ const resumeSlide = new ResumeSlide({
   ],
 });
 
-// TODO: blank slide to challenge
-const blankSlide = new ResumeSlide({
-  title: "",
-  bullets: [],
-});
+const blankSlide = new Slide([]);
 
 export const chapter1Slide = Chapter.withSlides([pluginSlide0, pluginSlide1, pluginSlide2, resumeSlide, blankSlide]);
