@@ -22,6 +22,13 @@ const slidesContent: SlideContent[] = [
       .addStep("1-12")
       .addStep("1-14")
       .build(),
+    transition: "slide-in none-out",
+  },
+  {
+    type: "code",
+    fileName: "enum-danger-with-number.ts",
+    steps: CodeStepsBuilder.createSteps().addStep("1-14").build(),
+    transition: "none-in slide-out",
   },
   {
     type: "code",
