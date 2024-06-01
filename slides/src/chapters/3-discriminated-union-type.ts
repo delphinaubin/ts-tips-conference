@@ -1,7 +1,6 @@
 import { Chapter } from "../slide/chapter.slide";
 import { getSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
-import { TsFeatureSlide } from "../slide/ts-feature.slide";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const slidesContent: SlideContent[] = [
@@ -48,9 +47,9 @@ const slidesContent: SlideContent[] = [
   },
   // // TODO: Aurel - Le slide qui ne marche pas 👇
   {
-    type: "gif",
-    gifSrc: "/public/tada.gif"
+    type: "image",
+    imageSrc: "/public/tada.gif"
   }
 ];
 
-export const chapter3Slides = Chapter.withSlides([...getSlides(slidesContent), new TsFeatureSlide()]);
+export const chapter3Slides = Chapter.withSlides([...getSlides(slidesContent)]);

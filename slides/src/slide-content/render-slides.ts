@@ -2,47 +2,41 @@ import { SlideContent } from "./slides";
 import { TitleSlide } from "../slide/title.slide";
 import { ImageSlide } from "../slide/image.slide";
 import { CodeSlide } from "../slide/code.slide";
-import { SpeakersSlide } from "../slide/speakers.slide";
 import { FirstSlide } from "../slide/first.slide";
 import { Slide } from "../slide-framework/block/slide.block";
 import { CompiledCodeSlide } from "../slide/compiled-code.slide";
-import { LinksSlide } from "../slide/links.slide";
-import { GifSlide } from "../slide/gif.slide";
 import { ResumeSlide } from "../slide/resume.slide";
 
 export function getSlides(slides: SlideContent[]): Slide[] {
-  return slides.map((slide): Slide => {
+  return slides.map((slide): Slide =>
+    getSlide(slide).withTransition(slide.transition)
+  );
+}
 
-    const slideType = slide.type;
+function getSlide(slide: SlideContent): Slide {
+  const slideType = slide.type;
 
-    switch (slideType) {
-      case "first":
-        return new FirstSlide(slide.imageUrl, slide.title, slide.backgroundImage).withTransition(slide.transition)
-      case "title":
-        return new TitleSlide(slide.title, slide.subtitle).withTransition(slide.transition)
-      case "image":
-        return new ImageSlide(slide.imageSrc, slide.title).withTransition(slide.transition)
-      case "gif":
-        return new GifSlide(slide.gifSrc, slide.title).withTransition(slide.transition)
-      case "code":
-        return new CodeSlide(slide.fileName, slide.title, slide.steps, slide.language).withTransition(slide.transition)
-      case "speakers":
-        return new SpeakersSlide(slide.speakers).withTransition(slide.transition)
-      case "resume":
-        return new ResumeSlide(slide).withTransition(slide.transition)
-      case "links":
-        return new LinksSlide(slide).withTransition(slide.transition)
-      case "compiledCode":
-        return new CompiledCodeSlide(slide.fileName, slide.title).withTransition(slide.transition)
-      // default:
-      //   // throw new Error(`Unknown slide type: ${toto}`); // 👍 Bof
+  switch (slideType) {
+    case "first":
+      return new FirstSlide(slide.imageUrl, slide.title, slide.backgroundImage)
+    case "title":
+      return new TitleSlide(slide.title, slide.subtitle)
+    case "image":
+      return new ImageSlide(slide.imageSrc, slide.title)
+    case "code":
+      return new CodeSlide(slide.fileName, slide.title, slide.steps, slide.language)
+    case "resume":
+      return new ResumeSlide(slide)
+    case "compiledCode":
+      return new CompiledCodeSlide(slide.fileName, slide.title)
+    default:
+      // throw new Error(`Unknown slide type: ${slide.type}`); // 👍 Bof
 
-      //   // const toto: never = slideType; // 👍 Bien
-      //   // throw new Error(`Unknown slide type: ${toto}`);
+      // const unknownType: never = slideType; // 👍 Bien
+      // throw new Error(`Unknown slide type: ${unknownType}`);
 
-      //   return assertNever(slide); // 🚀 Encore mieux
-    }
-  });
+      return assertNever(slide); // 🚀 Encore mieux
+  }
 }
 
 /**

@@ -1,12 +1,12 @@
-import { LinksSlideContent } from "../slide-content/slides";
+import { LinkItem } from "../slide-content/models";
 import { Links } from "../slide-framework/block/links/links.block";
 import { Slide } from "../slide-framework/block/slide.block";
-
+import { Title } from "../slide-framework/block/title/title.block";
 
 export class LinksSlide extends Slide {
   constructor(
-    public readonly linksSlideContent: Omit<LinksSlideContent, "type">,
+    public readonly title: string, links: LinkItem[]
   ) {
-    super([new Links(linksSlideContent)]);
+    super([Title.withText(title), new Links(links)]);
   }
 }

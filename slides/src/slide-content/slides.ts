@@ -1,6 +1,5 @@
 import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
 import { SlideTransition } from "../slide-framework/block/slide.block";
-import { Link, Speaker } from "./models";
 
 /*
 // Un comment to start the presentation
@@ -25,6 +24,12 @@ export interface TitleSlideContent {
   subtitle?: string;
 }
 
+export interface ImageSlideContent {
+  type: "image";
+  title?: string;
+  imageSrc: string;
+}
+
 export interface CodeSlideContent {
   type: "code";
   title?: string;
@@ -39,29 +44,6 @@ export interface CompiledCodeSlideContent {
   fileName: string;
 }
 
-export interface ImageSlideContent {
-  type: "image";
-  title?: string;
-  imageSrc: string;
-}
-
-export interface GifSlideContent {
-  type: "gif";
-  title?: string;
-  gifSrc: string;
-}
-
-export interface SpeakersSlideContent {
-  type: "speakers";
-  title?: string;
-  speakers: Speaker[];
-}
-export interface LinksSlideContent {
-  type: "links";
-  title?: string;
-  links: Link[];
-}
-
 export interface ResumeSlideContent {
   type: "resume";
   title: string;
@@ -72,10 +54,7 @@ export type SlideContent = (
   | FirstSlideContent
   | TitleSlideContent
   | ImageSlideContent
-  | GifSlideContent
   | CodeSlideContent
-  | SpeakersSlideContent
-  | LinksSlideContent
-  | ResumeSlideContent
   | CompiledCodeSlideContent
+  | ResumeSlideContent
 ) & { transition?: SlideTransition };
