@@ -1,4 +1,3 @@
-// @ts-strict-ignore
 import { CodeFromText } from "../slide-framework/block/code/code-from-text.block";
 import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
@@ -6,6 +5,7 @@ import { TitleSlide } from "../slide/title.slide";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 import { Chapter } from "../slide/chapter.slide";
 import { ResumeSlide } from "../slide/resume.slide";
+import { BlankSlide } from "../slide/blank.slide";
 
 const pluginSlide0 = new TitleSlide(
   "<i>Strictness</i> won't save you when the bullets fly",
@@ -18,6 +18,7 @@ function getPluginSlide1Title(): string {
   } else if (window.innerWidth < 400) {
     return "<code>typescript-strict-plugin</code>";
   }
+  return "TODO remove this before presentation";
 }
 
 const pluginSlide1 = new Slide([
@@ -54,7 +55,7 @@ const pluginSlide2 = new Slide([
     ...,
     "typecheck": "tsc && tsc-strict", // Can be added to CI
   },
-}`
+}`,
   ),
 ]);
 
@@ -67,6 +68,12 @@ const resumeSlide = new ResumeSlide({
   ],
 });
 
-const blankSlide = new Slide([]);
+const blankSlide = new BlankSlide();
 
-export const chapter1Slide = Chapter.withSlides([pluginSlide0, pluginSlide1, pluginSlide2, resumeSlide, blankSlide]);
+export const chapter1Slide = Chapter.withSlides([
+  pluginSlide0,
+  pluginSlide1,
+  pluginSlide2,
+  resumeSlide,
+  blankSlide,
+]);

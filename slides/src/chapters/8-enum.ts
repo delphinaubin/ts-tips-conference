@@ -1,27 +1,80 @@
 import { Chapter } from "../slide/chapter.slide";
 import { getSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
-import { CompiledCodeSlide } from "../slide/compiled-code.slide";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 // TODO LE PREMIER QUI A FINI SES SLIDES
 
 const slidesContent: SlideContent[] = [
   {
     type: "title",
-    title: "Find a title for <i>enum</i> and union types",
+    title: "The <i>enum</i> conundrum",
     subtitle: "Chapter 8.",
   },
   {
     type: "code",
+    fileName: "enum-danger.ts",
+    steps: CodeStepsBuilder.createSteps()
+      .addStep("1-4")
+      .addStep("1-7, 10")
+      .addStep("1-8, 10")
+      .addStep("1-10")
+      .addStep("1-12")
+      .addStep("1-14")
+      .build(),
+  },
+  {
+    type: "code",
+    title: "<i>enum</i>",
     fileName: "enum.ts",
+    transition: "auto-animate",
   },
   {
     type: "compiledCode",
+    title: "<i>enum</i>",
     fileName: "enum.ts",
+    transition: "auto-animate none-out",
+  },
+  {
+    type: "code",
+    title: "<i>const enum</i>",
+    fileName: "const-enum.ts",
+    transition: "auto-animate",
+  },
+  {
+    type: "multiCode",
+    title: "<i>const enum</i>",
+    fileNames: ["const-enum.ts", "compiled-code-enum.js"],
+    transition: "auto-animate slide-out",
+  },
+  {
+    type: "compiledCode",
+    title: "Or just an <i>union type</i>",
+    fileName: "simple-union-type.ts",
+  },
+  {
+    type: "compiledCode",
+    title: "Or an <i>Object</i>",
+    fileName: "simple-record.ts",
+  },
+  {
+    title: "Work with <i>Objects</i>",
+    type: "code",
+    fileName: "enum-as-object.ts",
+    steps: CodeStepsBuilder.createSteps()
+      .addStep("1-4")
+      .addStep("1-6")
+      .addStep("1-7")
+      .addStep("1-8")
+      .addStep("1-12")
+      .addStep("1-14")
+      .addStep("1-15")
+      .addStep("2-16")
+      .build(),
+  },
+  {
+    type: "tsFeature",
   },
 ];
 
-export const chapter8Slides = Chapter.withSlides([
-  ...getSlides(slidesContent),
-  new CompiledCodeSlide("enum.ts"),
-]);
+export const chapter8Slides = Chapter.withSlides([...getSlides(slidesContent)]);

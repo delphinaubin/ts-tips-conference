@@ -50,7 +50,7 @@ const trustMeSlide3 = new Slide([
   Subtitle.withText("But to use carefully..."),
   new CodeFromFile("is-asserts-carefully-2.ts")
     .withLanguage("typescript"),
-  Image.withSrc("/public/trust-me.webp"),
+  Image.withSrc("/trust-me.webp"),
 ]).withTransition('auto-animate');
 
 const trustMeSlide4 = new Slide([

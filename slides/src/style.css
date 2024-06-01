@@ -6,7 +6,8 @@ h5 {
   text-transform: none;
 }
 
-h5 i, h3 i {
+h5 i,
+h3 i {
   font-style: normal;
   background-color: var(--r-link-color);
   color: white;
@@ -20,5 +21,15 @@ h5 i, h3 i {
 }
 
 .reveal .hljs.has-highlights tr:not(.highlight-line) {
-  opacity: 0.1!important;
+  opacity: 0.1 !important;
 }
+
+.reveal.overview .slides section.present {
+  outline-color: deeppink !important;
+}
+
+/*
+ Uncomment it if you want to override the overview slide hover to
+.reveal.overview .slides section:hover {
+  outline-color: rgba(255, 20, 147, 0.4) !important;
+}*/

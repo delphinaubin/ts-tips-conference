@@ -4,8 +4,6 @@ import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
 
-// TODO ALO gérer le truc
-
 const slidesContent: SlideContent[] = [
   {
     type: "title",

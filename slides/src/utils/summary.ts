@@ -1,4 +1,3 @@
-// @ts-strict-ignore
 import { Slide } from "../slide-framework/block/slide.block";
 import { TitleSlide } from "../slide/title.slide";
 import { Title } from "../slide-framework/block/title/title.block";
@@ -14,16 +13,16 @@ export function computeSummarySlide(slides: Slide[] = []): Slide {
 
 function getAllTitleSlidesTitle(slides: Slide[]): string[] {
   return slides
-      .filter(isChapter)
-      .flatMap((chapter: Chapter) => chapter.getSlides())
-      .filter(isTitleSlide)
-      .map((slide: TitleSlide) => slide.title);
+    .filter(isChapter)
+    .flatMap((chapter: Chapter) => chapter.getSlides())
+    .filter(isTitleSlide)
+    .map((slide: TitleSlide) => slide.title);
 }
 
-function isChapter(slide: Slide): boolean {
+function isChapter(slide: Slide): slide is Chapter {
   return slide instanceof Chapter;
 }
 
-function isTitleSlide(slide: Slide): boolean {
+function isTitleSlide(slide: Slide): slide is TitleSlide {
   return slide instanceof TitleSlide;
 }
