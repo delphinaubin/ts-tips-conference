@@ -1,4 +1,3 @@
-// @ts-strict-ignore
 import "./links.block.css";
 
 import { RenderBlock } from "../../render-block";

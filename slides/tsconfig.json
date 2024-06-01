@@ -14,7 +14,7 @@
     "noEmit": true,
 
     /* Linting */
-    // "strict": true,
+    //    "strict": true,
     "strict": false,
 
     "plugins": [

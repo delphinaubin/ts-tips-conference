@@ -10,12 +10,6 @@ interface TsFeature {
 
 const featuresByChapters: TsFeature[] = [
   {
-    index: 1,
-    featureName: `<i>404</i> Documentation not found`,
-    tsDocLink:
-      "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates",
-  },
-  {
     index: 2,
     featureName: "User defined type guards",
     tsDocLink:
@@ -59,12 +53,9 @@ const featuresByChapters: TsFeature[] = [
   },
 ];
 
-function getFeatureByIndex(index: ChapterIndex): TsFeature {
+function getFeatureByIndex(index: ChapterIndex): TsFeature | null {
   const foundFeature = featuresByChapters.find((f) => f.index === index);
-  if (!foundFeature) {
-    throw new Error(`Cannot find feature for chapter index ${index}`);
-  }
-  return foundFeature;
+  return foundFeature || null;
 }
 
 export class TsFeatureSlide extends Slide {
@@ -73,7 +64,11 @@ export class TsFeatureSlide extends Slide {
   }
 
   async render(): Promise<HTMLElement> {
-    const feature = getFeatureByIndex(this.index);
+    const feature = this.chapterIndex && getFeatureByIndex(this.chapterIndex);
+    if (!feature) {
+      const notFoundSlide = new Slide([Title.withText("<i>404</i> Documentation not found")]);
+      return notFoundSlide.render();
+    }
     const slide = new Slide([
       Title.withText(feature.featureName),
       Link.withText("Go to documentation").withHref(feature.tsDocLink).withTargetBlank(),

@@ -1,9 +1,12 @@
 type LangAndCountry = {
   lang: string;
   country: string;
+  locale?: never; // ✨
 };
 type Locale = {
   locale: string;
+  lang?: never; // ✨
+  country?: never; // ✨
 };
 type I18N = LangAndCountry & Locale;
 // { lang: string, country: string, locale: string }
@@ -22,4 +25,5 @@ toI18N({
   locale: "fr-MA",
   lang: "es",
   country: "ES",
-}); // --> 🤯 But TS let me do that 😢
+});
+// ❌ Type 'string' is not assignable to type 'never'

@@ -1,54 +1,44 @@
-// @ts-strict-ignore
 import { RenderBlock } from "../render-block";
 import { ChapterComputationContext } from "../chapter-computation-context.type";
 
-export type SlideSingleTransition = "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
+type SlideSingleTransition = "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
 
 export type SlideTransition =
   | SlideSingleTransition
-  | `${SlideSingleTransition}-in ${SlideSingleTransition}-out`
-  | "auto-animate";
+  | `${SlideSingleTransition}-in ${SlideSingleTransition}-out`;
 
-const chapterAndSlideIndexRegexp = /#\/([0-9])(\/[0-9])?/;
-
-export type SlideIndex = number;
-export type ChapterIndex = number;
+export type SlideIndex = number & { __flavoring?: "SlideIndex" };
+export type ChapterIndex = number & { __flavoring?: "ChapterIndex" };
 
 export class Slide extends RenderBlock {
   public index: SlideIndex = 0;
-  public chapterIndex: ChapterIndex = 0;
+  public chapterIndex: ChapterIndex | null = 0;
 
-  private transition: SlideTransition = "slide";
-
-  getIndex(): SlideIndex {
-    const indexInUrl = +window.location.hash.replace(chapterAndSlideIndexRegexp, "$2");
-    if (Number.isNaN(indexInUrl)) {
-      return 0;
-    }
-    return indexInUrl;
-  }
-
-  getChapterIndex(): ChapterIndex {
-    return +window.location.hash.replace(chapterAndSlideIndexRegexp, "$1");
-  }
-
+  private transition: SlideTransition | null = null;
+  private isAutoAnimate = false;
 
   withChild(children: RenderBlock[]): RenderBlock {
     return new Slide(children);
   }
 
-  withTransition(transition: SlideTransition = "slide"): this {
+  withTransition(transition: SlideTransition | null = null): this {
     this.transition = transition;
+    return this;
+  }
+
+  withAutoAnimate(autoAnimate: boolean): this {
+    this.isAutoAnimate = autoAnimate;
     return this;
   }
 
   override getHtmlElement(): HTMLElement {
     const htmlElement = document.createElement("section");
 
-    if (this.transition === "auto-animate") {
+    if (this.isAutoAnimate) {
       htmlElement.setAttribute("data-auto-animate", "auto");
+      htmlElement.setAttribute("data-transition", this.transition || "none");
     } else {
-      htmlElement.setAttribute("data-transition", this.transition);
+      htmlElement.setAttribute("data-transition", this.transition || "slide");
     }
 
     return htmlElement;

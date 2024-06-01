@@ -38,6 +38,14 @@ export interface CodeSlideContent {
   language?: CodeLanguage;
 }
 
+export interface MultiCodeSlideContent {
+  type: "multiCode";
+  title?: string;
+  fileNames: string[];
+  steps?: CodeSteps[];
+  languages?: CodeLanguage[];
+}
+
 export interface CompiledCodeSlideContent {
   type: "compiledCode";
   title?: string;
@@ -49,12 +57,17 @@ export interface ResumeSlideContent {
   title: string;
   bullets: string[];
 }
+export interface FeatureSlideContent {
+  type: "tsFeature";
+}
 
 export type SlideContent = (
   | FirstSlideContent
   | TitleSlideContent
   | ImageSlideContent
   | CodeSlideContent
+  | MultiCodeSlideContent
   | CompiledCodeSlideContent
   | ResumeSlideContent
-) & { transition?: SlideTransition };
+  | FeatureSlideContent
+) & { transition?: SlideTransition; autoAnimate?: boolean };
