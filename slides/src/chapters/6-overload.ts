@@ -2,6 +2,7 @@ import { Chapter } from "../slide/chapter.slide";
 import { getSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const slidesContent: SlideContent[] = [
   {
@@ -12,6 +13,26 @@ const slidesContent: SlideContent[] = [
   {
     type: "code",
     fileName: "overload-1.ts",
+    steps: CodeStepsBuilder.createSteps()
+      .addStep("1-4")
+      .addStep("8-17")
+      .addStep("7-17")
+      .addStep("6-17")
+      .addStep("6-19")
+      .addStep("6-20")
+      .addStep("1-4, 6-8")
+      .build(),
+    transition: "slide-in none-out",
+  },
+  {
+    type: "code",
+    fileName: "overload-2.ts",
+    steps: CodeStepsBuilder.createSteps()
+      .addStep("1-4,8-11")
+      .addStep("1-4,6-11")
+      .addStep("26")
+      .build(),
+    transition: "none-in slide-out",
   },
   {
     type: "resume",
