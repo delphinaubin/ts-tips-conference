@@ -43,9 +43,13 @@ export class CodeSlide extends Slide {
       assertIsArrayOrUndefined(language);
 
       fileName
-        .map((currentFileName, index) =>
-          getCodeBlock(currentFileName, steps && steps[index], language && language[index]),
-        )
+        .map((currentFileName, index) => {
+          return getCodeBlock(
+            currentFileName,
+            steps && steps[index],
+            language !== undefined ? language[index] : undefined,
+          );
+        })
         .forEach((codeBlock) => codeBlocks.push(codeBlock));
     } else {
       assertIsNotArrayOrUndefined(steps);

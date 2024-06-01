@@ -11,17 +11,13 @@ const slidesContent: SlideContent[] = [
   },
   {
     type: "code",
-    fileName: "overload-1.ts"
+    fileName: "overload-1.ts",
   },
   {
     type: "resume",
     title: "Function Overloading",
-    bullets: [
-      `Allow to write <i>type-safe functions</i> with multiple signatures`,
-      ``,
-      ``,
-    ],
-    transition: "auto-animate"
+    bullets: [`Allow to write <i>type-safe functions</i> with multiple signatures`, ``, ``],
+    autoAnimate: true,
   },
   {
     type: "resume",
@@ -31,7 +27,7 @@ const slidesContent: SlideContent[] = [
       `<i>Powerful</i> feature in TypeScript`,
       ``,
     ],
-    transition: "auto-animate"
+    autoAnimate: true,
   },
   {
     type: "resume",
@@ -41,7 +37,7 @@ const slidesContent: SlideContent[] = [
       `<i style="background-color:transparent; color: inherit">Powerful</i> feature in TypeScript`,
       `<i>BUT</i> Don't use it too much`,
     ],
-    transition: "auto-animate"
+    autoAnimate: true,
   },
   {
     type: "resume",
@@ -50,10 +46,13 @@ const slidesContent: SlideContent[] = [
       `Allow to write <i>type-safe functions</i> with multiple signatures`,
       `<i style="background-color:transparent; color: inherit">Powerful</i> feature in TypeScript`,
       `<i>BUT</i> Don't use it too much, it can be <i>HARD</i> to read`,
-      ``
+      ``,
     ],
-    transition: "auto-animate"
+    autoAnimate: true,
   },
 ];
 
-export const chapter6Slides = Chapter.withSlides([...getSlides(slidesContent), new TsFeatureSlide()]).withTransition("slide-in zoom-out");
+export const chapter6Slides = Chapter.withSlides([
+  ...getSlides(slidesContent),
+  new TsFeatureSlide(),
+]).withTransition("slide-in zoom-out");

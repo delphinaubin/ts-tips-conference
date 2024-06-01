@@ -44,12 +44,12 @@ const trustMeSlide3 = new Slide([
   Subtitle.withText("But to use carefully..."),
   new CodeFromFile("is-asserts-carefully-2.ts").withLanguage("typescript"),
   Image.withSrc("/trust-me.webp"),
-]).withTransition("auto-animate");
+]).withAutoAnimate(true);
 
 const trustMeSlide4 = new Slide([
   Subtitle.withText("But to use carefully..."),
   new CodeFromFile("is-asserts-carefully-3.ts").withLanguage("typescript"),
-]).withTransition("auto-animate");
+]).withAutoAnimate(true);
 
 const resumeSlide = new ResumeSlide({
   title: "Type Guards",

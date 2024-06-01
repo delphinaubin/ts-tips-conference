@@ -34,25 +34,27 @@ const slidesContent: SlideContent[] = [
     type: "code",
     title: "<i>enum</i>",
     fileName: "enum.ts",
-    transition: "auto-animate",
+    autoAnimate: true,
   },
   {
     type: "compiledCode",
     title: "<i>enum</i>",
     fileName: "enum.ts",
-    transition: "auto-animate none-out",
+    autoAnimate: true,
+    transition: "none-in slide-out",
   },
   {
     type: "code",
     title: "<i>const enum</i>",
     fileName: "const-enum.ts",
-    transition: "auto-animate",
+    autoAnimate: true,
   },
   {
     type: "multiCode",
     title: "<i>const enum</i>",
     fileNames: ["const-enum.ts", "compiled-code-enum.js"],
-    transition: "auto-animate slide-out",
+    autoAnimate: true,
+    transition: "none-in slide-out",
   },
   {
     type: "compiledCode",
@@ -60,9 +62,17 @@ const slidesContent: SlideContent[] = [
     fileName: "simple-union-type.ts",
   },
   {
+    type: "code",
+    title: "Or an <i>Object</i>",
+    fileName: "simple-record.ts",
+    autoAnimate: true
+  },
+  {
     type: "compiledCode",
     title: "Or an <i>Object</i>",
     fileName: "simple-record.ts",
+    autoAnimate: true,
+    transition: "none-in slide-out"
   },
   {
     title: "Work with <i>Objects</i>",

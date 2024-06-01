@@ -70,4 +70,4 @@ export type SlideContent = (
   | CompiledCodeSlideContent
   | ResumeSlideContent
   | FeatureSlideContent
-) & { transition?: SlideTransition };
+) & { transition?: SlideTransition; autoAnimate?: boolean };
