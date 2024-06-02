@@ -64,7 +64,7 @@ export class TsFeatureSlide extends Slide {
   }
 
   async render(): Promise<HTMLElement> {
-    const feature = this.chapterIndex && getFeatureByIndex(this.chapterIndex);
+    const feature = this.chapterIndex && getFeatureByIndex(this.index);
     if (!feature) {
       const notFoundSlide = new Slide([Title.withText("<i>404</i> Documentation not found")]);
       return notFoundSlide.render();

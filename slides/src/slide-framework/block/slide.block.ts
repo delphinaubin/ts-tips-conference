@@ -1,14 +1,9 @@
 import { RenderBlock } from "../render-block";
 import { ChapterComputationContext } from "../chapter-computation-context.type";
+import { SlideTransition } from "./slide-transition";
 
-type SlideSingleTransition = "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
-
-export type SlideTransition =
-  | SlideSingleTransition
-  | `${SlideSingleTransition}-in ${SlideSingleTransition}-out`;
-
-export type SlideIndex = number & { __flavoring?: "SlideIndex" };
-export type ChapterIndex = number & { __flavoring?: "ChapterIndex" };
+export type SlideIndex = number;
+export type ChapterIndex = number;
 
 export class Slide extends RenderBlock {
   public index: SlideIndex = 0;

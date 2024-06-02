@@ -1,6 +1,5 @@
 import { SlideContent } from "./slides";
 import { TitleSlide } from "../slide/title.slide";
-import { ImageSlide } from "../slide/image.slide";
 import { CodeSlide } from "../slide/code.slide";
 import { FirstSlide } from "../slide/first.slide";
 import { Slide } from "../slide-framework/block/slide.block";
@@ -8,7 +7,7 @@ import { CompiledCodeSlide } from "../slide/compiled-code.slide";
 import { ResumeSlide } from "../slide/resume.slide";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
 
-export function getSlides(slides: SlideContent[]): Slide[] {
+export function renderSlides(slides: SlideContent[]): Slide[] {
   return slides.map(
     (slide): Slide =>
       getSlide(slide)
@@ -17,7 +16,8 @@ export function getSlides(slides: SlideContent[]): Slide[] {
   );
 }
 
-function getSlide(slide: SlideContent): Slide {
+// TODO: remove the any
+function getSlide(slide: SlideContent & any): Slide {
   const slideType = slide.type;
 
   switch (slideType) {
@@ -25,8 +25,6 @@ function getSlide(slide: SlideContent): Slide {
       return new FirstSlide(slide.imageUrl, slide.title, slide.backgroundImage);
     case "title":
       return new TitleSlide(slide.title, slide.subtitle);
-    case "image":
-      return new ImageSlide(slide.imageSrc, slide.title);
     case "code":
       return new CodeSlide(slide.fileName, slide.title, slide.steps, slide.language);
     case "multiCode":
@@ -38,18 +36,6 @@ function getSlide(slide: SlideContent): Slide {
     case "tsFeature":
       return new TsFeatureSlide();
     default:
-      // throw new Error(`Unknown slide type: ${slide.type}`); // 👍 Bof
-
-      // const unknownType: never = slideType; // 👍 Bien
-      // throw new Error(`Unknown slide type: ${unknownType}`);
-
-      return assertNever(slide); // 🚀 Encore mieux
+      throw new Error(`Unknown slide type: ${slideType}`);
   }
-}
-
-/**
- * @see never chapter
- */
-export function assertNever(x: never): never {
-  throw new Error(`Unexpected slide type: ${x}`);
 }

@@ -31,7 +31,6 @@ export class SlideDeck {
     this.slides.forEach((slide) => {
       slide.computeChapterAndSlideIndexes(context);
     });
-    console.dir(this.slides, { depth: 1000 });
 
     const htmlElements = await Promise.all(
       this.slides.map((slide) => {

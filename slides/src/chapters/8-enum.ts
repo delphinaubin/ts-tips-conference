@@ -1,5 +1,5 @@
 import { Chapter } from "../slide/chapter.slide";
-import { getSlides } from "../slide-content/render-slides";
+import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
@@ -94,4 +94,4 @@ const slidesContent: SlideContent[] = [
   },
 ];
 
-export const chapter8Slides = Chapter.withSlides([...getSlides(slidesContent)]);
+export const chapter8Slides = Chapter.withSlides([...renderSlides(slidesContent)]);

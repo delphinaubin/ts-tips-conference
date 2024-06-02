@@ -8,7 +8,7 @@ export function computeSummarySlide(slides: Slide[] = []): Slide {
   return new Slide([
     Title.withText("Summary"),
     ...getAllTitleSlidesTitle(slides).map((s) => Subtitle.withText(s)),
-  ]);
+    ]);
 }
 
 function getAllTitleSlidesTitle(slides: Slide[]): string[] {
@@ -19,10 +19,10 @@ function getAllTitleSlidesTitle(slides: Slide[]): string[] {
     .map((slide: TitleSlide) => slide.title);
 }
 
-function isChapter(slide: Slide): slide is Chapter {
+function isChapter(slide: Slide): boolean {
   return slide instanceof Chapter;
 }
 
-function isTitleSlide(slide: Slide): slide is TitleSlide {
+function isTitleSlide(slide: Slide): boolean {
   return slide instanceof TitleSlide;
 }

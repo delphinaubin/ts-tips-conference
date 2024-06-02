@@ -1,5 +1,5 @@
 import { Chapter } from "../slide/chapter.slide";
-import { getSlides } from "../slide-content/render-slides";
+import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
@@ -74,6 +74,6 @@ const slidesContent: SlideContent[] = [
 ];
 
 export const chapter6Slides = Chapter.withSlides([
-  ...getSlides(slidesContent),
+  ...renderSlides(slidesContent),
   new TsFeatureSlide(),
-]).withTransition("slide-in zoom-out");
+]).withTransition("slide-in zoum-out");

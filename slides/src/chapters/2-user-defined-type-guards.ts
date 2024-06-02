@@ -54,10 +54,10 @@ const trustMeSlide4 = new Slide([
 const resumeSlide = new ResumeSlide({
   title: "Type Guards",
   bullets: [
-    `Ensure type safety in your code`,
-    `Enhance autocompletion`,
-    `Prevent runtime errors`,
-    `To use with care`,
+    `👮‍️ Ensure type safety in your code`,
+    `🤖 Enhance autocompletion`,
+    `🙅‍ Prevent runtime errors`,
+    `🔥 To use with care`,
   ],
 });
 

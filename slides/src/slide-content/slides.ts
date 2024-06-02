@@ -1,37 +1,42 @@
 import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
-import { SlideTransition } from "../slide-framework/block/slide.block";
+import { SlideTransition } from "../slide-framework/block/slide-transition";
 
 /*
-// Un comment to start the presentation
 interface SlideContent {
   type: string;
   title?: string;
   subtitle?: string;
   fileName?: string;
+  fileNames: string[];
   imageSrc?: string;
+  bullets: string[];
+  backgroundImage?: string;
+  steps?: CodeSteps;
+  language?: CodeLanguage;
+  languages?: CodeLanguage[];
 } */
 
 export interface FirstSlideContent {
-  type: "first";
+  type: string;
   imageUrl: string;
   title: string;
   backgroundImage?: string;
 }
 
 export interface TitleSlideContent {
-  type: "title";
+  type: string;
   title: string;
   subtitle?: string;
 }
 
 export interface ImageSlideContent {
-  type: "image";
+  type: string;
   title?: string;
   imageSrc: string;
 }
 
 export interface CodeSlideContent {
-  type: "code";
+  type: string;
   title?: string;
   fileName: string;
   steps?: CodeSteps;
@@ -39,7 +44,7 @@ export interface CodeSlideContent {
 }
 
 export interface MultiCodeSlideContent {
-  type: "multiCode";
+  type: string;
   title?: string;
   fileNames: string[];
   steps?: CodeSteps[];
@@ -47,18 +52,18 @@ export interface MultiCodeSlideContent {
 }
 
 export interface CompiledCodeSlideContent {
-  type: "compiledCode";
+  type: string;
   title?: string;
   fileName: string;
 }
 
 export interface ResumeSlideContent {
-  type: "resume";
+  type: string;
   title: string;
   bullets: string[];
 }
 export interface FeatureSlideContent {
-  type: "tsFeature";
+  type: string;
 }
 
 export type SlideContent = (

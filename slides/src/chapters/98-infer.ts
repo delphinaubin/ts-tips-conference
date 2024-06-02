@@ -1,5 +1,5 @@
 import { Chapter } from "../slide/chapter.slide";
-import { getSlides } from "../slide-content/render-slides";
+import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 
 // TODO DAU gérer le truc
@@ -12,4 +12,4 @@ const slidesContent: SlideContent[] = [
   },
 ];
 
-export const chapter98Slides = Chapter.withSlides(getSlides(slidesContent));
+export const chapter98Slides = Chapter.withSlides(renderSlides(slidesContent));

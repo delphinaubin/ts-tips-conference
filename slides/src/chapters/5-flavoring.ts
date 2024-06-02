@@ -1,5 +1,5 @@
 import { Chapter } from "../slide/chapter.slide";
-import { getSlides } from "../slide-content/render-slides";
+import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
@@ -34,12 +34,20 @@ const slidesContent: SlideContent[] = [
     fileName: "branding.ts",
     steps: CodeStepsBuilder.createSteps()
       .addStep("1")
-      .addStep('1-3')
-      .addStep('1-5')
-      .addStep('7')
-      .addStep('7-11')
+      .addStep("1-3")
+      .addStep("1-5")
+      .addStep("7")
+      .addStep("7-11")
       .build(),
+  },
+  {
+    type: "tsFeature",
+  },
+  {
+    type: "resume",
+    title: "🧹",
+    bullets: [],
   },
 ];
 
-export const chapter5Slides = Chapter.withSlides(getSlides(slidesContent));
+export const chapter5Slides = Chapter.withSlides(renderSlides(slidesContent));

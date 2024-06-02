@@ -1,5 +1,5 @@
 import { Chapter } from "../slide/chapter.slide";
-import { getSlides } from "../slide-content/render-slides";
+import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
@@ -11,13 +11,11 @@ const slidesContent: SlideContent[] = [
   },
   {
     type: "code",
-    // title: "Discriminated Union Type",
-    fileName: "union-1.ts"
+    fileName: "union-1.ts",
   },
   {
     type: "code",
-    // title: "Discriminated Union Type",
-    fileName: "union-2.ts"
+    fileName: "union-2.ts",
   },
   {
     type: "code",
@@ -35,21 +33,18 @@ const slidesContent: SlideContent[] = [
   {
     type: "resume",
     title: "Discriminated Union Type",
-    bullets: [
-      `Improved Type Safety`,
-      `Enhanced Autocompletion`,
-    ],
+    bullets: [`Improved Type Safety`, `Enhanced Autocompletion`],
   },
+  // TODO: Aurel - Le slide qui ne marche pas 👇
+  // {
+  //   type: "image",
+  //   imageSrc: "/tada.gif",
+  // },
   {
     type: "first",
     title: `<h3><i>// TODO:</i> Aurel, vu que tu ne lis pas tes mails, je te mets un rappel ici: <br> <br> Slide GIF à fixer 🙏🏼</h3>`,
     imageUrl: "",
   },
-  // // TODO: Aurel - Le slide qui ne marche pas 👇
-  {
-    type: "image",
-    imageSrc: "/tada.gif"
-  }
 ];
 
-export const chapter3Slides = Chapter.withSlides([...getSlides(slidesContent)]);
+export const chapter3Slides = Chapter.withSlides([...renderSlides(slidesContent)]);

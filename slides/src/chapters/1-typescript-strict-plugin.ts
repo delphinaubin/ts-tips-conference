@@ -18,7 +18,6 @@ function getPluginSlide1Title(): string {
   } else if (window.innerWidth < 400) {
     return "<code>typescript-strict-plugin</code>";
   }
-  return "TODO remove this before presentation";
 }
 
 const pluginSlide1 = new Slide([
@@ -68,9 +67,7 @@ const resumeSlide = new ResumeSlide({
   ],
 });
 
-const slide = new Slide([
-  Title.withText("🧹"),
-]);
+const slide = new Slide([Title.withText("🧹")]);
 
 export const chapter1Slide = Chapter.withSlides([
   pluginSlide0,

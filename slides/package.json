@@ -5,11 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "tsc": "tsc",
-    "tsc-strict": "tsc-strict",
-    "update-strict-comments": "update-strict-comments",
-    "build": "tsc && tsc-strict && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
