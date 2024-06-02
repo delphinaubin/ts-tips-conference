@@ -1,11 +1,11 @@
-type P = {
+type User = {
   name: string;
   age: number;
 };
 
-function findPerson(name: string): P;
-function findPerson(age: number): P[];
-function findPerson(query: string | number): P | P[] {
+function findUser(name: string): User;
+function findUser(age: number): User[];
+function findUser(query: string | number): User | User[] {
   if (typeof query === "string") {
     return { name: query, age: 30 };
   } else {
@@ -16,5 +16,5 @@ function findPerson(query: string | number): P | P[] {
   }
 }
 
-findPerson('👩'); // { name: '👩', age: 30 }
-findPerson(30); // [ { name: '👩', age: 30 }, { name: '👨‍🔧', age: 30 } ]
+findUser('👩'); // { name: '👩', age: 30 }
+findUser(30); // [ { name: '👩', age: 30 }, { name: '👨‍🔧', age: 30 } ]

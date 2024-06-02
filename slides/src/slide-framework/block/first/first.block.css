@@ -28,6 +28,6 @@ h1.first-block__title {
 
 .barre {
   text-decoration: line-through;
-  text-decoration-style: wavy;
-  text-decoration-color: #2e78c7bc;
+  text-decoration-style: solid;
+  text-decoration-color: #2e78c7;
 }

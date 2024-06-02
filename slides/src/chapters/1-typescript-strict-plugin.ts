@@ -5,7 +5,7 @@ import { TitleSlide } from "../slide/title.slide";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 import { Chapter } from "../slide/chapter.slide";
 import { ResumeSlide } from "../slide/resume.slide";
-import { BlankSlide } from "../slide/blank.slide";
+import { Title } from "../slide-framework/block/title/title.block";
 
 const pluginSlide0 = new TitleSlide(
   "<i>Strictness</i> won't save you when the bullets fly",
@@ -68,12 +68,14 @@ const resumeSlide = new ResumeSlide({
   ],
 });
 
-const blankSlide = new BlankSlide();
+const slide = new Slide([
+  Title.withText("🧹"),
+]);
 
 export const chapter1Slide = Chapter.withSlides([
   pluginSlide0,
   pluginSlide1,
   pluginSlide2,
   resumeSlide,
-  blankSlide,
+  slide,
 ]);
