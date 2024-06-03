@@ -58,32 +58,14 @@ const pluginSlide2 = new Slide([
   ),
 ]);
 
-const resumeSlide1 = new ResumeSlide(
-  "TypeScript Strict Plugin",
-  [
-    "🚀 Progressive strictness",
-    "",
-    "",
-  ],
-).withAutoAnimate(true);
-
-const resumeSlide2 = new ResumeSlide(
-  "TypeScript Strict Plugin",
-  [
-    "🚀 Progressive strictness",
-    "👮‍♂️ No more excuses to be strict",
-    "",
-  ],
-).withAutoAnimate(true);
-
-const resumeSlide3 = new ResumeSlide(
+const resumeSlide = new ResumeSlide(
   "TypeScript Strict Plugin",
   [
     "🚀 Progressive strictness",
     "👮‍♂️ No more excuses to be strict",
     "🕵️‍♂️ Easy detection of files with strict error",
   ],
-).withAutoAnimate(true);
+);
 
 const cleanSlide = new Slide([Title.withText("🧹")]);
 
@@ -91,8 +73,6 @@ export const chapter1Slide = Chapter.withSlides([
   pluginSlide0,
   pluginSlide1,
   pluginSlide2,
-  resumeSlide1,
-  resumeSlide2,
-  resumeSlide3,
+  resumeSlide,
   cleanSlide,
 ]);
