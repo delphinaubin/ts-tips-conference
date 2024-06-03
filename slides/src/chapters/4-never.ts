@@ -40,8 +40,8 @@ const slidesContent: SlideContent[] = [
     type: "resume",
     title: "<i>never</i> is useful to...",
     bullets: [
-      `Ensure unreachable`, // (code // function)
-      `"Disable" some value in a union type`,
+      `🌛 Ensure unreachable`, // (code // function)
+      `🙅‍♂️ "Disable" some value in a union type`,
     ],
   },
 ];

@@ -2,6 +2,8 @@ import { Chapter } from "../slide/chapter.slide";
 import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
+import { CodeFromFile } from "../slide-framework/block/code/code-from-file.block";
+import { Subtitle } from "../slide-framework/block/subtitle.block";
 
 // TODO LE PREMIER QUI A FINI SES SLIDES
 
@@ -50,9 +52,12 @@ const slidesContent: SlideContent[] = [
     autoAnimate: true,
   },
   {
-    type: "multiCode",
-    title: "<i>const enum</i>",
-    fileNames: ["const-enum.ts", "compiled-code-enum.js"],
+    type: "custom",
+    blocks: [
+      Subtitle.withText("<i>const enum</i>"),
+      CodeFromFile.fromFile("const-enum.ts"),
+      CodeFromFile.fromFile("compiled-code-enum.js"),
+    ],
     autoAnimate: true,
     transition: "none-in slide-out",
   },
@@ -65,14 +70,14 @@ const slidesContent: SlideContent[] = [
     type: "code",
     title: "Or an <i>Object</i>",
     fileName: "simple-record.ts",
-    autoAnimate: true
+    autoAnimate: true,
   },
   {
     type: "compiledCode",
     title: "Or an <i>Object</i>",
     fileName: "simple-record.ts",
     autoAnimate: true,
-    transition: "none-in slide-out"
+    transition: "none-in slide-out",
   },
   {
     title: "Work with <i>Objects</i>",

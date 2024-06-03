@@ -1,69 +1,87 @@
 import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.block";
 import { SlideTransition } from "../slide-framework/block/slide-transition";
+import { RenderBlock } from "../slide-framework/render-block";
 
 /*
 interface SlideContent {
-  type: string;
+  type: SlideType;
   title?: string;
   subtitle?: string;
   fileName?: string;
-  fileNames: string[];
   imageSrc?: string;
-  bullets: string[];
+  bullets?: string[];
   backgroundImage?: string;
   steps?: CodeSteps;
   language?: CodeLanguage;
-  languages?: CodeLanguage[];
 } */
 
+type SlideType =
+  | "first"
+  | "title"
+  | "image"
+  | "code"
+  | "compiledCode"
+  | "resume"
+  | "list"
+  | "tsFeature"
+  | "custom";
+
 export interface FirstSlideContent {
-  type: string;
+  type: SlideType;
   imageUrl: string;
   title: string;
   backgroundImage?: string;
+  overlay?: {
+    color: string;
+    opacity: number;
+  };
 }
 
 export interface TitleSlideContent {
-  type: string;
+  type: SlideType;
   title: string;
   subtitle?: string;
 }
 
 export interface ImageSlideContent {
-  type: string;
+  type: SlideType;
   title?: string;
   imageSrc: string;
 }
 
 export interface CodeSlideContent {
-  type: string;
+  type: SlideType;
   title?: string;
   fileName: string;
   steps?: CodeSteps;
   language?: CodeLanguage;
 }
 
-export interface MultiCodeSlideContent {
-  type: string;
-  title?: string;
-  fileNames: string[];
-  steps?: CodeSteps[];
-  languages?: CodeLanguage[];
-}
-
 export interface CompiledCodeSlideContent {
-  type: string;
+  type: SlideType;
   title?: string;
   fileName: string;
 }
 
 export interface ResumeSlideContent {
-  type: string;
+  type: SlideType;
   title: string;
   bullets: string[];
 }
-export interface FeatureSlideContent {
-  type: string;
+
+export interface ListSlideContent {
+  type: SlideType;
+  title: string;
+  items: string[];
+}
+
+export interface TsFeatureSlideContent {
+  type: SlideType;
+}
+
+export interface CustomSlideContent {
+  type: SlideType;
+  blocks: RenderBlock[];
 }
 
 export type SlideContent = (
@@ -71,8 +89,9 @@ export type SlideContent = (
   | TitleSlideContent
   | ImageSlideContent
   | CodeSlideContent
-  | MultiCodeSlideContent
   | CompiledCodeSlideContent
   | ResumeSlideContent
-  | FeatureSlideContent
+  | ListSlideContent
+  | TsFeatureSlideContent
+  | CustomSlideContent
 ) & { transition?: SlideTransition; autoAnimate?: boolean };
