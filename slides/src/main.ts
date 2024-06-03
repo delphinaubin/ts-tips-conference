@@ -17,20 +17,26 @@ import { Slide } from "./slide-framework/block/slide.block";
 import { ImageSlide } from "./slide/image.slide";
 
 const chapter0Slide = Chapter.withSlides([
-  ...[ 
-    "📖", // 
-    "👯‍♂️", // 
-    "🎤", // 
-    "🧉", // 
-    "📆", // Date 
+  ...[
+    "📖", //
+    "👯‍♂️", //
+    "🎤", //
+    "🧉", //
+    "📆", // Date
     "🍺", // Pression
     "🍋", // Pressé
-    "🛞", // Pourquoi pas reinvente la ... 
-    "🎡", // New framework 
-  ]
-    .map((emoji) => new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true)),
-  new ImageSlide("/schema.png"),
-  new Slide([Title.withText(`<h1>🎬</h1>`)])
+    "🛞", // Pourquoi pas reinvente la ...
+    "🎡", // New framework
+  ].map((emoji) => new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true)),
+  ...[
+    "schema-framework/schema-1.jpeg",
+    "schema-framework/schema-2.jpeg",
+    "schema-framework/schema-3.jpeg",
+    "schema-framework/schema-4.jpeg",
+    "schema-framework/schema-5.jpeg",
+    "schema-framework/schema-6.jpeg",
+  ].map((url) => new ImageSlide(url).withTransition("fade")),
+  new Slide([Title.withText(`<h1>🎬</h1>`)]),
 ]);
 
 const chapterSlides = [

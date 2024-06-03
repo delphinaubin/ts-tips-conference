@@ -1,11 +1,11 @@
 type UserId = {
-  __type?: 'UserId'
-} & string
+  __type?: "UserId";
+} & string;
 
-const userId: UserId = '42' // ✅
+const userId: UserId = "42"; // ✅
 
-type ValidUserId  = {
-  __type: 'UserId'
-} & string
+type ValidUserId = {
+  __type: "ValidUserId";
+} & string;
 
-const validUser: ValidUserId = '42' // ❌
+const validUser: ValidUserId = "42"; // ❌

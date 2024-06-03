@@ -1,9 +1,17 @@
-function getUserById(userId: UserId): Promise<User> {
-  // ...
+interface Duck {
+  talk: "Coin coin";
+  __type?: "Duck";
 }
 
-const orderId: OrderId
-await getUserById(orderId) // ❌
+interface PlasticDuck {
+  talk: "Coin coin";
+  __type?: PlasticDuck;
+}
 
-const userId: UserId
-await getUserById(userId) // ✅
+function startPairProgramingWith(toy: PlasticDuck) {}
+
+const animal: Duck = {
+  talk: "Coin coin",
+};
+
+startPairProgramingWith(animal); //❌: 🎉🍾🎆

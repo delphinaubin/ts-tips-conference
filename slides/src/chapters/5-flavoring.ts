@@ -29,12 +29,13 @@ const slidesContent: SlideContent[] = [
       .addStep("1-13")
       .addStep("1-15")
       .build(),
+    transition: "slide-in none-out"
   },
   {
     type: "code",
-    title: "Avoid confusion",
     fileName: "flavoring.ts",
-    steps: CodeStepsBuilder.createSteps().addStep("1-3").addStep("1-6").addStep("1-9").build(),
+    transition: "none-in slide-out",
+    steps: CodeStepsBuilder.createSteps().addStep("1-9").addStep("3-17").build()
   },
   {
     type: "code",
