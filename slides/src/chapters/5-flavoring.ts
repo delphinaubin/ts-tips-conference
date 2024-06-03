@@ -63,14 +63,15 @@ const slidesContent: SlideContent[] = [
       .build(),
   },
   {
-    type: "tsFeature",
+    type: "resume",
+    title: "A dash of ...",
+    bullets: [
+      "🦆 <i>flavoring</i> to avoid Duck typing confusion",
+      "🛡️ <i>branding</i> to enforce safety",
+    ],
   },
   {
-    type: "resume",
-    bullets: [
-      "🦆Use <i>flavoring</i> to avoid Duck typing confusion",
-      "🛡️Use <i>branding</i> to enforce safety",
-    ],
+    type: "tsFeature",
   },
   {
     type: "custom",

@@ -10,43 +10,43 @@ interface TsFeature {
 
 const featuresByChapters: TsFeature[] = [
   {
-    index: 2,
+    index: 3,
     featureName: "User defined type guards",
     tsDocLink:
       "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates",
   },
   {
-    index: 3,
+    index: 4,
     featureName: "Discriminated unions",
     tsDocLink: "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions",
   },
   {
-    index: 4,
+    index: 5,
     featureName: "Never",
     tsDocLink: "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type",
   },
   {
-    index: 5,
+    index: 6,
     featureName: "Flavoring",
     tsDocLink: "https://brightinventions.pl/blog/branding-flavoring/",
   },
   {
-    index: 6,
+    index: 7,
     featureName: "Overload",
     tsDocLink: "https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads",
   },
   {
-    index: 7,
+    index: 8,
     featureName: "Template literal types",
     tsDocLink: "https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html",
   },
   {
-    index: 8,
+    index: 9,
     featureName: "Enums",
     tsDocLink: "https://www.typescriptlang.org/docs/handbook/enums.html",
   },
   {
-    index: 9,
+    index: 10,
     featureName: "Infer",
     tsDocLink:
       "https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types",

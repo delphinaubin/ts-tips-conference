@@ -4,7 +4,7 @@ function assertStr(v: unknown): asserts v is string {
   }
 }
 
-function logUpperCaseValue(input: any) {
+function logUpperCaseValue(input: unknown) {
   assertStr(input); // 🙏🏼
 
   // input's type is just 'string' here

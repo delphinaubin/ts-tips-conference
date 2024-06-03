@@ -1,5 +1,4 @@
 import { CodeFromFile } from "../slide-framework/block/code/code-from-file.block";
-import { Slide } from "../slide-framework/block/slide.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
 import { Chapter } from "../slide/chapter.slide";
 import { Image } from "../slide-framework/block/image.block";
@@ -18,7 +17,6 @@ const slidesContent: SlideContent[] = [
     type: "code",
     title: "<i>is</i> User-Defined Type Guards",
     fileName: "is.ts",
-    steps: CodeStepsBuilder.createSteps().addStep("1-3").addStep("1-8").addStep("1-3,9-13").build(),
   },
   {
     type: "code",
@@ -40,19 +38,13 @@ const slidesContent: SlideContent[] = [
     steps: CodeStepsBuilder.createSteps().addStep("2-4").addStep("1-5").build(),
     transition: "none-in slide-out",
   },
-];
-
-const trustMeSlide3 = new Slide([
-  Subtitle.withText("But to use carefully..."),
-  new CodeFromFile("is-asserts-carefully-2.ts").withLanguage("typescript"),
-  Image.withSrc("/trust-me.webp"),
-]).withAutoAnimate(true);
-
-const slidesContent2: SlideContent[] = [
   {
-    type: "code",
-    title: "But to use carefully...",
-    fileName: "is-asserts-carefully-3.ts",
+    type: "custom",
+    blocks: [
+      Subtitle.withText("But to use carefully..."),
+      new CodeFromFile("is-asserts-carefully-2.ts").withLanguage("typescript"),
+      Image.withSrc("/trust-me.webp"),
+    ],
     autoAnimate: true,
   },
   {
@@ -67,4 +59,4 @@ const slidesContent2: SlideContent[] = [
   },
 ];
 
-export const chapter2Slide = Chapter.withSlides([...renderSlides(slidesContent), trustMeSlide3, ...renderSlides(slidesContent2)]);
+export const chapter2Slide = Chapter.withSlides(renderSlides(slidesContent));
