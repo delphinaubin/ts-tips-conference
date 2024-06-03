@@ -13,7 +13,7 @@
     "isolatedModules": false,
     "noEmit": true,
 
-    "strict": false,
+    "strict": true,
 
     //    "plugins": [
     //      {

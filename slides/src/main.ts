@@ -11,8 +11,27 @@ import { chapter6Slides } from "./chapters/6-overload";
 import { chapter7Slides } from "./chapters/7-template-literal-type";
 import { chapter8Slides } from "./chapters/8-enum";
 import { chapter98Slides } from "./chapters/98-infer";
+import { Chapter } from "./slide/chapter.slide";
+import { Title } from "./slide-framework/block/title/title.block";
 import { Slide } from "./slide-framework/block/slide.block";
-import { Image } from "./slide-framework/block/image.block";
+import { ImageSlide } from "./slide/image.slide";
+
+const chapter0Slide = Chapter.withSlides([
+  ...[ 
+    "📖", // 
+    "👯‍♂️", // 
+    "🎤", // 
+    "🧉", // 
+    "📆", // Date 
+    "🍺", // Pression
+    "🍋", // Pressé
+    "🛞", // Pourquoi pas reinvente la ... 
+    "🎡", // New framework 
+  ]
+    .map((emoji) => new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true)),
+  new ImageSlide("/schema.png"),
+  new Slide([Title.withText(`<h1>🎬</h1>`)])
+]);
 
 const chapterSlides = [
   chapter2Slide,
@@ -28,8 +47,8 @@ const chapterSlides = [
 const slideDeck = new SlideDeck(
   [
     firstSlide,
+    chapter0Slide,
     speakersSlide,
-    new Slide([Image.withSrc("/schema.png")]),
     chapter1Slide,
     computeSummarySlide([chapter1Slide, ...chapterSlides]),
     ...chapterSlides,

@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "tsc && open http://localhost:1337/#/2",
     "dev": "vite",
     "build": "tsc && vite build"
   },
