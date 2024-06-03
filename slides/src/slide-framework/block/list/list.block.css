@@ -1,0 +1,19 @@
+.slide-list h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.slide-list ul {
+list-style: square;
+}
+
+.slide-list li::marker {
+  transform: rotate(45deg);
+}
+
+.slide-list li i {
+background-color: var(--r-link-color);
+padding: 0.4rem;
+border-radius: 6px;
+color: white;
+}

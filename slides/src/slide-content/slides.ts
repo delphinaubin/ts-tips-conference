@@ -62,6 +62,13 @@ export interface ResumeSlideContent {
   title: string;
   bullets: string[];
 }
+
+export interface ListSlideContent {
+  type: string;
+  title: string;
+  items: string[];
+}
+
 export interface FeatureSlideContent {
   type: string;
 }
@@ -74,5 +81,6 @@ export type SlideContent = (
   | MultiCodeSlideContent
   | CompiledCodeSlideContent
   | ResumeSlideContent
+  | ListSlideContent
   | FeatureSlideContent
 ) & { transition?: SlideTransition; autoAnimate?: boolean };

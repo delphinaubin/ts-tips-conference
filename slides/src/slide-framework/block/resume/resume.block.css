@@ -3,6 +3,10 @@
     margin-bottom: 4rem;
 }
 
+.slide-resume ul {
+  list-style: none;
+}
+
 .slide-resume li::marker {
   color: var(--r-link-color);
 }

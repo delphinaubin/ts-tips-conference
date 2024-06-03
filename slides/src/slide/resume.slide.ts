@@ -1,12 +1,12 @@
-import { ResumeSlideContent } from "../slide-content/slides";
 import { Resume } from "../slide-framework/block/resume/resume.block";
 import { Slide } from "../slide-framework/block/slide.block";
+import { Title } from "../slide-framework/block/title/title.block";
 
 
 export class ResumeSlide extends Slide {
   constructor(
-    public readonly resumeSlideContent: Omit<ResumeSlideContent, "type">,
+    public readonly title: string, public readonly bullets: string[]
   ) {
-    super([new Resume(resumeSlideContent)]);
+    super([Title.withText(title), new Resume(bullets)]);
   }
 }

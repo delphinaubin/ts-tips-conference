@@ -1,20 +1,20 @@
-import "./resume.block.css";
+import "./list.block.css";
 
 import { RenderBlock } from "../../render-block";
 
-export class Resume extends RenderBlock {
-  constructor(private readonly bullets: string[]) {
+export class List extends RenderBlock {
+  constructor(private readonly list: string[]) {
     super([]);
   }
 
   override getHtmlElement(): HTMLElement {
     const element = document.createElement("div");
-    element.classList.add("slide-resume");
+    element.classList.add("slide-list");
 
     const list = document.createElement("ul");
     list.classList.add("list");
 
-    this.bullets.forEach((bullet, index) => {
+    this.list.forEach((bullet, index) => {
       const listItem = document.createElement("li");
       listItem.innerHTML = bullet;
       listItem.setAttribute('data-id', index.toString());
