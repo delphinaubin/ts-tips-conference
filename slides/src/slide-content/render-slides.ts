@@ -23,7 +23,7 @@ function getSlide(slide: SlideContent & any): Slide {
 
   switch (slideType) {
     case "first":
-      return new FirstSlide(slide.imageUrl, slide.title, slide.backgroundImage);
+      return new FirstSlide(slide.title, slide.imageUrl, slide.backgroundImage, slide.overlay);
     case "title":
       return new TitleSlide(slide.title, slide.subtitle);
     case "list":
@@ -32,12 +32,12 @@ function getSlide(slide: SlideContent & any): Slide {
       return new ResumeSlide(slide.title, slide.bullets);
     case "code":
       return new CodeSlide(slide.fileName, slide.title, slide.steps, slide.language);
-    case "multiCode":
-      return new CodeSlide(slide.fileNames, slide.title, slide.steps, slide.languages);
     case "compiledCode":
       return new CompiledCodeSlide(slide.fileName, slide.title);
     case "tsFeature":
       return new TsFeatureSlide();
+    case "custom":
+      return new Slide(slide.blocks);
     default:
       throw new Error(`Unknown slide type: ${slideType}`);
   }

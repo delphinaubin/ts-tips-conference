@@ -7,7 +7,8 @@ h5 {
 }
 
 h5 i,
-h3 i {
+h3 i,
+h1 i {
   font-style: normal;
   background-color: var(--r-link-color);
   color: white;

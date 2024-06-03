@@ -11,6 +11,7 @@ import { chapter6Slides } from "./chapters/6-overload";
 import { chapter7Slides } from "./chapters/7-template-literal-type";
 import { chapter8Slides } from "./chapters/8-enum";
 import { chapter98Slides } from "./chapters/98-infer";
+import { BlankSlide } from "./slide/blank.slide";
 
 const chapterSlides = [
   chapter2Slide,
@@ -27,6 +28,7 @@ const slideDeck = new SlideDeck(
   [
     firstSlide,
     speakersSlide,
+    new BlankSlide(),
     chapter1Slide,
     computeSummarySlide([chapter1Slide, ...chapterSlides]),
     ...chapterSlides,

@@ -5,12 +5,7 @@ import { FirstSlide } from "../slide/first.slide";
 import { LinksSlide } from "../slide/links.slide";
 import { SpeakersSlide } from "../slide/speakers.slide";
 
-export const firstSlide = new FirstSlide(
-    "/typescript-logo.png",
-    `The 20 most <span class="barre">painfull</span> profitable typescript minutes of your life!`,
-    // "/public/first-photo-unsplash.avif",
-    "https://images.unsplash.com/photo-1544411047-c491e34a24e0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-);
+export const firstSlide = new FirstSlide(`The 20 most <span class="barre">painfull</span> profitable typescript minutes of your life!`, "/typescript-logo.png", "https://images.unsplash.com/photo-1544411047-c491e34a24e0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 
 export const speakersSlide = new SpeakersSlide(
     [
