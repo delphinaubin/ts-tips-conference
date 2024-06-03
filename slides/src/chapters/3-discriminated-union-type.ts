@@ -33,7 +33,7 @@ const slidesContent: SlideContent[] = [
   {
     type: "resume",
     title: "Discriminated Union Type",
-    bullets: [`Improved Type Safety`, `Enhanced Autocompletion`],
+    bullets: [`👮‍♂️ Improved Type Safety`, `🤖 Enhanced Autocompletion`],
   },
   // TODO: Aurel - Le slide qui ne marche pas 👇
   // {

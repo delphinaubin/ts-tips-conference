@@ -65,16 +65,6 @@ const slidesContent2: SlideContent[] = [
       `🔥 To use with care`,
     ],
   },
-  {
-    type: "resume",
-    title: "Type Guards",
-    bullets: [
-      `👮‍️ Ensure type safety in your code`,
-      `🤖 Enhance autocompletion`,
-      `🙅‍ Prevent runtime errors`,
-      `🔥 To use with care`,
-    ],
-  },
 ];
 
 export const chapter2Slide = Chapter.withSlides([...renderSlides(slidesContent), trustMeSlide3, ...renderSlides(slidesContent2)]);

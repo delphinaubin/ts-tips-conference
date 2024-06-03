@@ -7,6 +7,12 @@
 list-style: square;
 }
 
+.slide-list li {
+  text-decoration: underline;
+  text-decoration-color: black;
+  font-style: italic;
+}
+
 .slide-list li::marker {
   transform: rotate(45deg);
 }
