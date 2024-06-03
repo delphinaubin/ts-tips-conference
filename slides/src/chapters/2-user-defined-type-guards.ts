@@ -35,8 +35,9 @@ const slidesContent: SlideContent[] = [
     type: "code",
     title: "But to use carefully...",
     fileName: "is-asserts-carefully-2.ts",
-    steps: CodeStepsBuilder.createSteps().addStep("2-4").addStep("1-5").build(),
-    transition: "none-in slide-out",
+    steps: CodeStepsBuilder.createSteps().addStep("1-5").build(),
+    transition: "none",
+    autoAnimate: true,
   },
   {
     type: "custom",
