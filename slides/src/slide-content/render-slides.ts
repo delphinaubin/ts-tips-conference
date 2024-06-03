@@ -7,7 +7,6 @@ import { CompiledCodeSlide } from "../slide/compiled-code.slide";
 import { ResumeSlide } from "../slide/resume.slide";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
 import { ListSlide } from "../slide/list.slide";
-import { ImageSlide } from "../slide/image.slide";
 
 export function renderSlides(slides: SlideContent[]): Slide[] {
   return slides.map(
