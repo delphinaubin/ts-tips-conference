@@ -1,24 +1,22 @@
 import axios from "axios";
 
-export interface Compiled {
-  compiled: { outputText: string; diagnostics: unknown[] };
+export interface JsCode {
+  compiled: { outputText: string };
 }
 
-export interface NotCompiled {
+export interface TsCode {
   code: string;
 }
 
-type Code = Compiled | NotCompiled;
-
 /**
- * @returns {Compiled} if parameter output is "js"
- * @returns {NotCompiled} if parameter output is "js"
+ * @returns {JsCode} if parameter output is "js"
+ * @returns {TsCode} if parameter output is "js"
  */
-export async function fetchCode(file: string, output: "js" | "ts"): Promise<Code> {
+export async function fetchCode(file: string, output: "js" | "ts"): Promise<JsCode | TsCode> {
   const url = new URL("http://localhost:3000/code");
   url.searchParams.set("fileName", file);
   url.searchParams.set("outputLanguage", output);
-  const response = await axios.get<Compiled | NotCompiled>(url.toString());
+  const response = await axios.get<JsCode | TsCode>(url.toString());
 
   return response.data;
 }

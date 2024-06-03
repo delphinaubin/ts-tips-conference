@@ -1,3 +1,3 @@
-type Country = "Spain" | "France";
+type Country = "ES" | "FR";
 
-const myCountry: Country = "Spain";
+const myCountry: Country = "ES";

@@ -83,16 +83,6 @@ const slidesContent: SlideContent[] = [
     title: "Work with <i>Objects</i>",
     type: "code",
     fileName: "enum-as-object.ts",
-    steps: CodeStepsBuilder.createSteps()
-      .addStep("1-4")
-      .addStep("1-6")
-      .addStep("1-7")
-      .addStep("1-8")
-      .addStep("1-12")
-      .addStep("1-14")
-      .addStep("1-15")
-      .addStep("2-16")
-      .build(),
   },
   {
     type: "tsFeature",

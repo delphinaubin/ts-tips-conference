@@ -12,22 +12,12 @@ const slidesContent: SlideContent[] = [
   {
     type: "code",
     fileName: "union-1.ts",
-  },
-  {
-    type: "code",
-    fileName: "union-2.ts",
-  },
-  {
-    type: "code",
-    title: "Discriminated Union Type",
-    fileName: "union-3.ts",
     steps: CodeStepsBuilder.createSteps()
-      .addStep("1,12")
-      .addStep("1-2,6,12")
-      .addStep("1-3,6,12")
-      .addStep("1-4,6,12")
-      .addStep("1-5,6,12")
       .addStep("1-12")
+      .addStep("2,7")
+      .addStep("12-14,25")
+      .addStep("12-18,25")
+      .addStep("12-25")
       .build(),
   },
   {

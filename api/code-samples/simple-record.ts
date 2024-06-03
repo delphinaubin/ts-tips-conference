@@ -1,6 +1,6 @@
 const Countries = {
-  ES: "Spain",
-  FR: "France",
+  ES: "ES",
+  FR: "FR",
 } as const;
 
 const myCountry = Countries.ES;

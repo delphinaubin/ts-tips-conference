@@ -1,1 +1,1 @@
-const myCountry = "Spain";
+const myCountry = "ES";

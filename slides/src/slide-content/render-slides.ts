@@ -39,7 +39,7 @@ function getSlide(slide: SlideContent & any): Slide {
     case "custom":
       return new Slide(slide.blocks);
     // case "image":
-    //   return new ImageSlide(slide.imageUrl);
+    //   return new ImageSlide(slide.imageSrc);
     default:
       throw new Error(`Unknown slide type: ${slideType}`);
   }

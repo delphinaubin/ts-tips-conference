@@ -21,11 +21,10 @@ const chapter0Slide = Chapter.withSlides([
     "📖", //
     "👯‍♂️", //
     "🎤", //
-    "🧉", //
+    "🍹", //
     "📆", // Date
     "🍺", // Pression
     "🍋", // Pressé
-    "🛞", // Pourquoi pas reinvente la ...
     "🎡", // New framework
   ].map((emoji) => new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true)),
   ...[
