@@ -10,17 +10,17 @@ export const firstSlide = new FirstSlide(`The 20 most <span class="barre">painfu
 export const speakersSlide = new SpeakersSlide(
     [
         {
+            name: "Delphin Aubin",
+            twitter: "@DelphinAubin",
+            bio: "Javascript expert @Zenika",
+            pictureUrl: "/delphin-aubin.jpeg",
+        },
+        {
             name: "Aurélien Loyer",
             twitter: "@AurelienLoyer",
             bio: "Software Engineering Leader @QIMA",
             pictureUrl: "/aurelien-loyer.png",
         },
-        {
-            name: "Delphin Aubin",
-            twitter: "@DelphinAubin",
-            bio: "Javascript expert @Zenika",
-            pictureUrl: "/delphin-aubin.jpeg",
-        }
     ]
 )
 
