@@ -15,11 +15,11 @@
 
     "strict": true,
 
-    //    "plugins": [
-    //      {
-    //        "name": "typescript-strict-plugin"
-    //      }
-    //    ],
+    //        "plugins": [
+    //          {
+    //            "name": "typescript-strict-plugin"
+    //          }
+    //        ],
 
     "noUnusedLocals": true,
     "noUnusedParameters": true,
