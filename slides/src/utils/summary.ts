@@ -4,23 +4,19 @@ import { Title } from "../slide-framework/block/title/title.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
 import { Chapter } from "../slide/chapter.slide";
 
-export function computeSummarySlide(slides: Slide[] = []): Slide {
+export function computeSummarySlide(slides: Chapter[] = []): Slide {
   return new Slide([
     Title.withText("Summary"),
-    ...getAllTitleSlidesTitle(slides).map((s) => Subtitle.withText(s)),
-    ]);
+    ...getAllTitleSlidesTitle(slides.flatMap((chapter: Chapter) => chapter.getSlides())).map((s) =>
+      Subtitle.withText(s),
+    ),
+  ]);
 }
 
-function getAllTitleSlidesTitle(slides: Slide[]): string[] {
-  return slides
-    .filter(isChapter)
-    .flatMap((chapter: Chapter) => chapter.getSlides())
-    .filter(isTitleSlide)
-    .map((slide: TitleSlide) => slide.title);
-}
+function getAllTitleSlidesTitle(allSlides: Slide[]): string[] {
+  const titleSlidesOnly = allSlides.filter(isTitleSlide);
 
-function isChapter(slide: Slide): boolean {
-  return slide instanceof Chapter;
+  return titleSlidesOnly.map((slide: TitleSlide) => slide.title);
 }
 
 function isTitleSlide(slide: Slide): boolean {
