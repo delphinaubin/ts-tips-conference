@@ -21,24 +21,6 @@ const slidesContent: SlideContent[] = [
   },
   {
     type: "code",
-    fileName: "duck-typing.ts",
-    steps: CodeStepsBuilder.createSteps()
-      .addStep("1-3")
-      .addStep("1-7")
-      .addStep("1-9")
-      .addStep("1-13")
-      .addStep("1-15")
-      .build(),
-    transition: "slide-in none-out"
-  },
-  {
-    type: "code",
-    fileName: "flavoring.ts",
-    transition: "none-in slide-out",
-    steps: CodeStepsBuilder.createSteps().addStep("1-9").addStep("3-17").build()
-  },
-  {
-    type: "code",
     title: "Flavoring vs Branding",
     fileName: "flavoring-vs-branding.ts",
     steps: CodeStepsBuilder.createSteps()
@@ -61,14 +43,6 @@ const slidesContent: SlideContent[] = [
       .addStep("7")
       .addStep("7-11")
       .build(),
-  },
-  {
-    type: "resume",
-    title: "A dash of ...",
-    bullets: [
-      "🦆 <i>flavoring</i> to avoid Duck typing confusion",
-      "🛡️ <i>branding</i> to enforce safety",
-    ],
   },
   {
     type: "tsFeature",

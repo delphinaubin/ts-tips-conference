@@ -62,7 +62,7 @@ const resumeSlide = new ResumeSlide(
   "TypeScript Strict Plugin",
   [
     "🚀 Progressive strictness",
-    "👮‍♂️ No more excuses to be strict",
+    "👮‍♂️ No more excuses not to be strict",
     "🕵️‍♂️ Easy detection of files with strict error",
   ],
 );

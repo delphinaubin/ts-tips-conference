@@ -10,11 +10,6 @@ const slidesContent: SlideContent[] = [
     subtitle: "Chapter 6.",
   },
   {
-    type: "code",
-    fileName: "overload-1.ts",
-    transition: "slide-in none-out",
-  },
-  {
     type: "resume",
     title: "Function Overloading",
     bullets: [`✍️ Allow to write <i>type-safe functions</i> with multiple signatures`, ``, ``],
