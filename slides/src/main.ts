@@ -9,7 +9,6 @@ import { chapter4Slides } from "./chapters/4-never";
 import { chapter5Slides } from "./chapters/5-flavoring";
 import { chapter6Slides } from "./chapters/6-overload";
 import { chapter7Slides } from "./chapters/7-template-literal-type";
-import { chapter8Slides } from "./chapters/8-enum";
 import { chapter98Slides } from "./chapters/98-infer";
 import { Chapter } from "./slide/chapter.slide";
 import { Title } from "./slide-framework/block/title/title.block";
@@ -45,7 +44,6 @@ const chapterSlides = [
   chapter5Slides,
   chapter6Slides,
   chapter7Slides,
-  chapter8Slides,
   chapter98Slides,
 ];
 
@@ -57,8 +55,8 @@ const slideDeck = new SlideDeck(
     chapter1Slide,
     computeSummarySlide([chapter1Slide, ...chapterSlides]),
     ...chapterSlides,
-    linksSlide,
     thanksSlide,
+    linksSlide,
   ],
   "slide-container",
 );
