@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && open http://localhost:1337/#/2",
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && tsc-strict && vite build"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
