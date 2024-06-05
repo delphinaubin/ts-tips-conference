@@ -2,19 +2,6 @@ import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.bloc
 import { SlideTransition } from "../slide-framework/block/slide-transition";
 import { RenderBlock } from "../slide-framework/render-block";
 
-/*
-interface SlideContent {
-  type: SlideType;
-  title?: string;
-  subtitle?: string;
-  fileName?: string;
-  imageSrc?: string;
-  bullets?: string[];
-  backgroundImage?: string;
-  steps?: CodeSteps;
-  language?: CodeLanguage;
-} */
-
 type SlideType =
   | "first"
   | "title"

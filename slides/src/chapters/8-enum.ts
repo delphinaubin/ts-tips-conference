@@ -5,8 +5,6 @@ import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 import { CodeFromFile } from "../slide-framework/block/code/code-from-file.block";
 import { Subtitle } from "../slide-framework/block/subtitle.block";
 
-// TODO LE PREMIER QUI A FINI SES SLIDES
-
 const slidesContent: SlideContent[] = [
   {
     type: "title",

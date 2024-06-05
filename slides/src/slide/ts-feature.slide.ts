@@ -1,12 +1,18 @@
 import { ChapterIndex, Slide } from "../slide-framework/block/slide.block";
 import { Title } from "../slide-framework/block/title/title.block";
 import { Link } from "../slide-framework/block/link/link.block";
+import { TsFeature } from "../slide-content/models";
 
-interface TsFeature {
-  tsDocLink: string;
-  featureName: string;
-  index: number;
-}
+const NOT_FOUND_SLIDE = new Slide([Title.withText("<i>404</i> Documentation not found")]);
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ * 👇
+ */
 
 const featuresByChapters: TsFeature[] = [
   {
@@ -59,20 +65,42 @@ function getFeatureByIndex(index: ChapterIndex): TsFeature | null {
 }
 
 export class TsFeatureSlide extends Slide {
-  constructor() {
-    super([]);
-  }
-
   async render(): Promise<HTMLElement> {
-    const feature = this.chapterIndex && getFeatureByIndex(this.index);
+    this.assertChapter();
+
+    const feature = getFeatureByIndex(this.index);
+
     if (!feature) {
-      const notFoundSlide = new Slide([Title.withText("<i>404</i> Documentation not found")]);
-      return notFoundSlide.render();
+      return NOT_FOUND_SLIDE.render();
     }
+
+    /**
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     */
+
     const slide = new Slide([
       Title.withText(feature.featureName),
       Link.withText("Go to documentation").withHref(feature.tsDocLink).withTargetBlank(),
     ]);
     return slide.render();
+  }
+
+  assertChapter(): asserts this is { index: ChapterIndex } {
+    if (typeof this.index !== "number") {
+      throw new Error("Chapter index is not a number");
+    }
+  }
+
+  constructor() {
+    super([]);
   }
 }

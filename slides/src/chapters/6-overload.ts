@@ -1,7 +1,6 @@
 import { Chapter } from "../slide/chapter.slide";
 import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
-import { TsFeatureSlide } from "../slide/ts-feature.slide";
 
 const slidesContent: SlideContent[] = [
   {
@@ -46,9 +45,37 @@ const slidesContent: SlideContent[] = [
     ],
     autoAnimate: true,
   },
+  {
+    type: "tsFeature",
+  },
 ];
 
-export const chapter6Slides = Chapter.withSlides([
-  ...renderSlides(slidesContent),
-  new TsFeatureSlide(),
-]).withTransition("slide-in zoum-out");
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ * 👇
+ *
+ */
+
+export const chapter6Slides = Chapter.withSlides([...renderSlides(slidesContent)]).withTransition(
+  "slide-in zoum-out",
+);
+
+/**
+ *
+ * 👆
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */

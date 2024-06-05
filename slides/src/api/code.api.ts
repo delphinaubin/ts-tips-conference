@@ -8,15 +8,37 @@ export interface TsCode {
   code: string;
 }
 
-/**
- * @returns {JsCode} if parameter output is "js"
- * @returns {TsCode} if parameter output is "js"
- */
-export async function fetchCode(file: string, output: "js" | "ts"): Promise<JsCode | TsCode> {
+function getFileUrl(file: string, output: "js" | "ts"): string {
   const url = new URL("http://localhost:3000/code");
   url.searchParams.set("fileName", file);
   url.searchParams.set("outputLanguage", output);
-  const response = await axios.get<JsCode | TsCode>(url.toString());
+  return url.toString();
+}
 
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * 👇
+ *
+ */
+
+/**
+ * @returns {JsCode} if output is "js"
+ * @returns {TsCode} if output is "ts"
+ */
+export async function fetchCode(file: string, output: "js" | "ts"): Promise<JsCode | TsCode> {
+  const url = getFileUrl(file, output);
+  const response = await axios.get<JsCode | TsCode>(url);
   return response.data;
 }

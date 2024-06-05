@@ -17,6 +17,17 @@ export function renderSlides(slides: SlideContent[]): Slide[] {
   );
 }
 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
 // TODO: remove the any
 function getSlide(slide: SlideContent & any): Slide {
   const slideType = slide.type;

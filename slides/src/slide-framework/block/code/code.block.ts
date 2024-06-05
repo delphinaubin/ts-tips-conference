@@ -2,7 +2,6 @@ import { RenderBlock } from "../../render-block";
 
 type CodeSingleLine = `${number}` | `${number}-${number}`;
 
-// TODO DAU: find a better way
 type CodeLines =
   | CodeSingleLine
   | `${CodeSingleLine},${CodeSingleLine}`

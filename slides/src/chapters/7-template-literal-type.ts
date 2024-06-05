@@ -3,8 +3,6 @@ import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
 import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
-// TODO DAU gérer le truc
-
 const slidesContent: SlideContent[] = [
   {
     type: "title",
@@ -24,6 +22,30 @@ const slidesContent: SlideContent[] = [
   },
 ];
 
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * 👇
+ */
+
 export const chapter7Slides = Chapter.withSlides(renderSlides(slidesContent)).withTransition(
   "zoum-in slide-out",
 );
+
+/**
+ * 👆
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */

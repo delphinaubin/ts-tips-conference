@@ -13,6 +13,21 @@ const slidesContent: SlideContent[] = [
     title: "Discriminated Union Type",
     bullets: [`👮‍♂️ Improved Type Safety`, `🤖 Enhanced Autocompletion`],
   },
+  /**
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   * 👇
+   */
+
   // TODO: Aurel - Le slide qui ne marche pas 👇
   // {
   //   type: "image",
@@ -24,5 +39,23 @@ const slidesContent: SlideContent[] = [
     imageUrl: "",
   },
 ];
+
+/**
+ *
+ * 👆
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 export const chapter3Slides = Chapter.withSlides([...renderSlides(slidesContent)]);

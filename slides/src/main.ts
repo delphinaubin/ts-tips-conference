@@ -39,7 +39,6 @@ const chapter0Slide = Chapter.withSlides([
     "🍋", // Pressé
     "🎡", // New framework
   ]),
-  ...toImageSlides(["schema-framework/schema-1.jpeg"]),
   new Slide([new CodeFromText(`new TitleSlide("I am a title")`)]).withAutoAnimate(true),
   new Slide([new CodeFromText(`new TitleSlide("I am a title")`), new Image("/title-slide.png")])
     .withAutoAnimate(true)
