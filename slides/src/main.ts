@@ -14,9 +14,22 @@ import { Chapter } from "./slide/chapter.slide";
 import { Title } from "./slide-framework/block/title/title.block";
 import { Slide } from "./slide-framework/block/slide.block";
 import { ImageSlide } from "./slide/image.slide";
+import { CodeFromText } from "./slide-framework/block/code/code-from-text.block";
+import { Image } from "./slide-framework/block/image.block";
+import { FirstSlide } from "./slide/first.slide";
+
+function toEmojiSlides(emojis: string[]): Slide[] {
+  return emojis.map((emoji) =>
+    new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true),
+  );
+}
+
+function toImageSlides(urls: string[]): Slide[] {
+  return urls.map((url) => new ImageSlide(url).withTransition("fade"));
+}
 
 const chapter0Slide = Chapter.withSlides([
-  ...[
+  ...toEmojiSlides([
     "📖", //
     "👯‍♂️", //
     "🎤", //
@@ -25,16 +38,24 @@ const chapter0Slide = Chapter.withSlides([
     "🍺", // Pression
     "🍋", // Pressé
     "🎡", // New framework
-  ].map((emoji) => new Slide([Title.withText(`<h1>${emoji}</h1>`)]).withAutoAnimate(true)),
-  ...[
-    "schema-framework/schema-1.jpeg",
-    "schema-framework/schema-2.jpeg",
+  ]),
+  ...toImageSlides(["schema-framework/schema-1.jpeg"]),
+  new Slide([new CodeFromText(`new TitleSlide("I am a title")`)]).withAutoAnimate(true),
+  new Slide([new CodeFromText(`new TitleSlide("I am a title")`), new Image("/title-slide.png")])
+    .withAutoAnimate(true)
+    .withTransition("none-in slide-out"),
+  new Slide([
+    new CodeFromText(`new ImageSlide("/ts-logo.png")`),
+    new Image("/image-slide.png"),
+  ]).withTransition("slide-in fade-out"),
+  new FirstSlide("", undefined, "/all-slides.png").withTransition("fade-in slide-out"),
+  ...toImageSlides([
     "schema-framework/schema-3.jpeg",
     "schema-framework/schema-4.jpeg",
     "schema-framework/schema-5.jpeg",
     "schema-framework/schema-6.jpeg",
-  ].map((url) => new ImageSlide(url).withTransition("fade")),
-  new Slide([Title.withText(`<h1>🎬</h1>`)]),
+  ]),
+  ...toEmojiSlides(["🎬"]),
 ]);
 
 const chapterSlides = [
