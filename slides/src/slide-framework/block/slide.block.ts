@@ -2,6 +2,23 @@ import { RenderBlock } from "../render-block";
 import { ChapterComputationContext } from "../chapter-computation-context.type";
 import { SlideTransition } from "./slide-transition";
 
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * 👇
+ *
+ */
+
 export type SlideIndex = number;
 export type ChapterIndex = number;
 
@@ -9,6 +26,21 @@ export class Slide extends RenderBlock {
   public index: SlideIndex = 0;
   public chapterIndex: ChapterIndex | null = 0;
 
+  /**
+   *
+   * 👆
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   */
   private transition: SlideTransition | null = null;
   private isAutoAnimate = false;
 

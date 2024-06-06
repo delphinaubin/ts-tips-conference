@@ -94,8 +94,8 @@ export class TsFeatureSlide extends Slide {
     return slide.render();
   }
 
-  assertChapter(): asserts this is { index: ChapterIndex } {
-    if (typeof this.index !== "number") {
+  assertChapter(): asserts this is { chapterIndex: ChapterIndex } {
+    if (typeof this.chapterIndex !== "number") {
       throw new Error("Chapter index is not a number");
     }
   }
