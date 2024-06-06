@@ -68,7 +68,7 @@ export class TsFeatureSlide extends Slide {
   async render(): Promise<HTMLElement> {
     this.assertChapter();
 
-    const feature = getFeatureByIndex(this.index);
+    const feature = getFeatureByIndex(this.chapterIndex);
 
     if (!feature) {
       return NOT_FOUND_SLIDE.render();

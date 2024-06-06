@@ -14,7 +14,7 @@ function getAllTitleSlidesTitle(allSlides: Slide[]): string[] {
   return titleSlidesOnly.map((slide: TitleSlide) => slide.title);
 }
 
-function isTitleSlide(slide: Slide): boolean {
+function isTitleSlide(slide: Slide): slide is TitleSlide {
   return slide instanceof TitleSlide;
 }
 

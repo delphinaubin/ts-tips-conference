@@ -49,9 +49,9 @@ const slidesContent: SlideContent[] = [
     autoAnimate: true,
   },
   {
-    type: "list",
+    type: "resume",
     title: "Type Guards",
-    items: [
+    bullets: [
       `👮‍️ Ensure type safety in your code`,
       `🤖 Enhance autocompletion`,
       `🙅‍ Prevent runtime errors`,
@@ -61,19 +61,19 @@ const slidesContent: SlideContent[] = [
 ];
 
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 
 export const chapter2Slide = Chapter.withSlides(renderSlides(slidesContent));

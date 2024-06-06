@@ -7,6 +7,7 @@ import { CompiledCodeSlide } from "../slide/compiled-code.slide";
 import { ResumeSlide } from "../slide/resume.slide";
 import { TsFeatureSlide } from "../slide/ts-feature.slide";
 import { ListSlide } from "../slide/list.slide";
+import { ImageSlide } from "../slide/image.slide";
 
 export function renderSlides(slides: SlideContent[]): Slide[] {
   return slides.map(
@@ -18,18 +19,18 @@ export function renderSlides(slides: SlideContent[]): Slide[] {
 }
 
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 
 // TODO: remove the any
-function getSlide(slide: SlideContent & any): Slide {
+function getSlide(slide: SlideContent): Slide {
   const slideType = slide.type;
 
   switch (slideType) {
@@ -49,9 +50,10 @@ function getSlide(slide: SlideContent & any): Slide {
       return new TsFeatureSlide();
     case "custom":
       return new Slide(slide.blocks);
-    // case "image":
-    //   return new ImageSlide(slide.imageSrc);
+    case "image":
+      return new ImageSlide(slide.imageSrc);
     default:
-      throw new Error(`Unknown slide type: ${slideType}`);
+      const unreachableType: never = slideType;
+      throw new Error(`Unknown slide type: ${unreachableType}`);
   }
 }

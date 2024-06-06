@@ -1,3 +1,4 @@
+// @ts-strict-ignore
 import { Code } from "./code.block";
 import { fetchCode } from "../../../api/code.api";
 

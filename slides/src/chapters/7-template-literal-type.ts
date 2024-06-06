@@ -35,7 +35,7 @@ const slidesContent: SlideContent[] = [
  */
 
 export const chapter7Slides = Chapter.withSlides(renderSlides(slidesContent)).withTransition(
-  "zoum-in slide-out",
+   "zoom-in slide-out",
 );
 
 /**
