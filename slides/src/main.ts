@@ -1,7 +1,13 @@
 import "./style.css";
 import { SlideDeck } from "./slide-framework/slide-deck";
 import { chapter2Slide } from "./chapters/2-user-defined-type-guards";
-import { firstSlide, linksSlide, speakersSlide, thanksSlide } from "./chapters/99-other";
+import {
+  firstSlide,
+  linksSlide,
+  openFeedbackSlide,
+  speakersSlide,
+  thanksSlide,
+} from "./chapters/99-other";
 import { chapter1Slide } from "./chapters/1-typescript-strict-plugin";
 import { computeSummarySlide } from "./utils/summary";
 import { chapter3Slides } from "./chapters/3-discriminated-union-type";
@@ -76,6 +82,7 @@ const slideDeck = new SlideDeck(
     computeSummarySlide([chapter1Slide, ...chapterSlides]),
     ...chapterSlides,
     thanksSlide,
+    openFeedbackSlide,
     linksSlide,
   ],
   "slide-container",
