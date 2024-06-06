@@ -9,7 +9,7 @@ const slidesContent: SlideContent[] = [
   {
     type: "title",
     title: "The <i>enum</i> conundrum",
-    subtitle: "Chapter 8.",
+    subtitle: "Chapter 81.",
   },
   {
     type: "code",
@@ -81,9 +81,6 @@ const slidesContent: SlideContent[] = [
     title: "Work with <i>Objects</i>",
     type: "code",
     fileName: "enum-as-object.ts",
-  },
-  {
-    type: "tsFeature",
   },
 ];
 

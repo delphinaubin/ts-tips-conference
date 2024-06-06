@@ -23,6 +23,7 @@ import { ImageSlide } from "./slide/image.slide";
 import { CodeFromText } from "./slide-framework/block/code/code-from-text.block";
 import { Image } from "./slide-framework/block/image.block";
 import { FirstSlide } from "./slide/first.slide";
+import {chapter8Slides} from "./chapters/8-enum";
 
 function toEmojiSlides(emojis: string[]): Slide[] {
   return emojis.map((emoji) =>
@@ -70,7 +71,7 @@ const chapterSlides = [
   chapter5Slides,
   chapter6Slides,
   chapter7Slides,
-  chapter98Slides,
+  chapter98Slides
 ];
 
 const slideDeck = new SlideDeck(
@@ -84,6 +85,7 @@ const slideDeck = new SlideDeck(
     thanksSlide,
     openFeedbackSlide,
     linksSlide,
+    chapter8Slides,
   ],
   "slide-container",
 );
