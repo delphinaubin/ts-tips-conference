@@ -15,7 +15,7 @@ import { Title } from "../slide-framework/block/title/title.block";
 function getPluginSlide1Title(): string {
   if (window.innerWidth > 400) {
     return "<code>typescript-strict-plugin</code> 🙌";
-  } else if (window.innerWidth < 400) {
+  } else {
     return "<code>typescript-strict-plugin</code>";
   }
 }

@@ -10,8 +10,16 @@
 
 ## 😎 Tips
 
-## 🔧 Utils
+- [Progressive strictness with `ts-strict-plugin`](https://github.com/allegro/typescript-strict-plugin)
+- User-Defined Type Guards with [is]() and [asserts]()
+- With <code>union</code> we stand
+- Never say <code>never</code>
+
+
+## 🪧 Slides
+
+- [Slide Devfest Lille 2024](https://github.com/delphinaubin/ts-tips-conference/blob/main/slides.pdf)
 
 ## 📣 Sessions
 
-- [Devfest Lille 2024](https://devfest.gdglille.org/)
+- [Devfest Lille 2024](https://devfest.gdglille.org/talk-page-les-20-minutes-typescript-les-/)
