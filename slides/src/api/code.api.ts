@@ -37,6 +37,8 @@ function getFileUrl(file: string, output: "js" | "ts"): string {
  * @returns {JsCode} if output is "js"
  * @returns {TsCode} if output is "ts"
  */
+export async function fetchCode(file: string, output: "ts"): Promise<TsCode>;
+export async function fetchCode(file: string, output: "js"): Promise<JsCode>;
 export async function fetchCode(file: string, output: "js" | "ts"): Promise<JsCode | TsCode> {
   const url = getFileUrl(file, output);
   const response = await axios.get<JsCode | TsCode>(url);

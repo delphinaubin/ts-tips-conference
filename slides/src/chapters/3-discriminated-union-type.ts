@@ -29,15 +29,11 @@ const slidesContent: SlideContent[] = [
    */
 
   // TODO: Aurel - Le slide qui ne marche pas 👇
-  // {
-  //   type: "image",
-  //   imageSrc: "/tada.gif",
-  // },
   {
-    type: "first",
-    title: `<h3><i>// TODO:</i> Aurel, vu que tu ne lis pas tes mails, je te mets un rappel ici: <br> <br> Slide GIF à fixer 🙏🏼</h3>`,
-    imageUrl: "",
+    type: "image",
+    imageSrc: "/tada.gif",
   },
+  
 ];
 
 /**

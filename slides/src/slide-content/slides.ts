@@ -2,19 +2,9 @@ import { CodeLanguage, CodeSteps } from "../slide-framework/block/code/code.bloc
 import { SlideTransition } from "../slide-framework/block/slide-transition";
 import { RenderBlock } from "../slide-framework/render-block";
 
-type SlideType =
-  | "first"
-  | "title"
-  | "image"
-  | "code"
-  | "compiledCode"
-  | "resume"
-  | "list"
-  | "tsFeature"
-  | "custom";
 
 export interface FirstSlideContent {
-  type: SlideType;
+  type: "first";
   imageUrl: string;
   title: string;
   backgroundImage?: string;
@@ -25,19 +15,19 @@ export interface FirstSlideContent {
 }
 
 export interface TitleSlideContent {
-  type: SlideType;
+  type: "title";
   title: string;
   subtitle?: string;
 }
 
 export interface ImageSlideContent {
-  type: SlideType;
+  type: "image";
   title?: string;
   imageSrc: string;
 }
 
 export interface CodeSlideContent {
-  type: SlideType;
+  type: "code";
   title?: string;
   fileName: string;
   steps?: CodeSteps;
@@ -45,29 +35,29 @@ export interface CodeSlideContent {
 }
 
 export interface CompiledCodeSlideContent {
-  type: SlideType;
+  type: "compiledCode";
   title?: string;
   fileName: string;
 }
 
 export interface ResumeSlideContent {
-  type: SlideType;
+  type: "resume";
   title: string;
   bullets: string[];
 }
 
 export interface ListSlideContent {
-  type: SlideType;
+  type: "list";
   title: string;
   items: string[];
 }
 
 export interface TsFeatureSlideContent {
-  type: SlideType;
+  type: "tsFeature";
 }
 
 export interface CustomSlideContent {
-  type: SlideType;
+  type: "custom";
   blocks: RenderBlock[];
 }
 

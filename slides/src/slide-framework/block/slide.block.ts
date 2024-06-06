@@ -19,8 +19,8 @@ import { SlideTransition } from "./slide-transition";
  *
  */
 
-export type SlideIndex = number;
-export type ChapterIndex = number;
+export type SlideIndex = number & { __type?: "SlideIndex"};
+export type ChapterIndex = number & { __type?: "ChapterIndex"};
 
 export class Slide extends RenderBlock {
   public index: SlideIndex = 0;

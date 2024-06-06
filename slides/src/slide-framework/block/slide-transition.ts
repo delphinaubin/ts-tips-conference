@@ -8,4 +8,6 @@
 
 type SlideSingleTransition = "none" | "fade" | "slide" | "convex" | "concave" | "zoom";
 
-export type SlideTransition = SlideSingleTransition | string;
+export type SlideTransition =
+  | SlideSingleTransition
+  | `${SlideSingleTransition}-in ${SlideSingleTransition}-out`;
