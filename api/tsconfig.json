@@ -1,31 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noEmit": true,
-
-    /* Linting */
-    // "strict": true,
-    "strict": false,
-
-    "plugins": [
-      {
-        "name": "typescript-strict-plugin"
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+      "paths": {
+          "*": ["node_modules/*", "src/types/*"]
       }
-    ],
-
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
-}
+  "include": ["./src/**/*"]
+  }

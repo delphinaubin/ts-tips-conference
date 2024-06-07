@@ -9,7 +9,7 @@ export interface TsCode {
 }
 
 function getFileUrl(file: string, output: "js" | "ts"): string {
-  const url = new URL("http://localhost:3000/code");
+  const url = new URL("https://ts-tips-conference-neon.vercel.app:3000/code");
   url.searchParams.set("fileName", file);
   url.searchParams.set("outputLanguage", output);
   return url.toString();
