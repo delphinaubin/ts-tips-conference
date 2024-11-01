@@ -4,7 +4,7 @@ import { fetchCode } from "../../../api/code.api";
 
 export class CompiledCodeFromFile extends Code {
   override async getCode() {
-    const fileContent = await fetchCoakcde(this.fileName, "js");
+    const fileContent = await fetchCode(this.fileName, "js");
 
     return fileContent['compiled']['outputText'];
   }

@@ -10,10 +10,19 @@
 
 ## 😎 Tips
 
-- [Progressive strictness with `ts-strict-plugin`](https://github.com/allegro/typescript-strict-plugin)
-- User-Defined Type Guards with [is]() and [asserts]()
+- [<code>Strictness</code> won't save you when the bullets fly](https://github.com/allegro/typescript-strict-plugin)
+- User-Defined Type Guards with <code>is</code> and <code>asserts</code>
 - With <code>union</code> we stand
 - Never say <code>never</code>
+- A dash of <code>flavoring</code>
+- Don't <code>overload</code> me with your problems, mate.
+- A quick zoom on <code>template literal</code> type
+
+Coming soon..
+
+- The <code>enum</code> conundrum
+- <code>Infer</code>
+
 
 
 ## 🪧 Slides

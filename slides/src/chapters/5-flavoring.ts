@@ -10,15 +10,15 @@ const slidesContent: SlideContent[] = [
     title: "A dash of <i>flavoring</i>",
     subtitle: "Chapter 5.",
   },
-  {
-    type: "first",
-    title: "<i>Duck typing</i>",
-    backgroundImage: "/duck-typing.avif",
-    overlay: {
-      color: "orange",
-      opacity: 0.8,
-    },
-  },
+  // {
+  //   type: "first",
+  //   title: "<i>Duck typing</i>",
+  //   backgroundImage: "/duck-typing.avif",
+  //   overlay: {
+  //     color: "orange",
+  //     opacity: 0.8,
+  //   },
+  // },
   {
     type: "code",
     title: "Flavoring vs Branding",

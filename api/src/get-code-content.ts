@@ -9,6 +9,7 @@ export async function getCodeContent(
   outputLanguage: string,
 ): Promise<{ code: string } | { compiled: TranspileOutput } | null> {
   try {
+    console.debug(`./code-samples/${fileName}`);
     const codeBuffer = await readFile(`./code-samples/${fileName}`);
     const code = codeBuffer.toString();
     if (outputLanguage === "ts") {
