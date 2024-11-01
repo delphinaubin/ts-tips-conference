@@ -5,7 +5,7 @@ import { RenderBlock } from "../slide-framework/render-block";
 
 export interface FirstSlideContent {
   type: "first";
-  imageUrl: string;
+  imageUrl?: string;
   title: string;
   backgroundImage?: string;
   overlay?: {
