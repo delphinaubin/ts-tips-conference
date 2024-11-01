@@ -7,6 +7,11 @@ import { Subtitle } from "../slide-framework/block/subtitle.block";
 
 const slidesContent: SlideContent[] = [
   {
+    type: "first",
+    backgroundImage: "/rappel.jpg",
+    title: "",
+  },
+  {
     type: "title",
     title: "The <i>enum</i> conundrum",
     subtitle: "Chapter 8.",
