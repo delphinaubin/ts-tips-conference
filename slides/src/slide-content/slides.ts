@@ -15,7 +15,7 @@ type SlideType =
 
 export interface FirstSlideContent {
   type: SlideType;
-  imageUrl: string;
+  imageUrl?: string;
   title: string;
   backgroundImage?: string;
   overlay?: {
