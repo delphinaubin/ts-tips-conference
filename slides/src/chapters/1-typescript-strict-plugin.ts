@@ -7,33 +7,13 @@ import { Chapter } from "../slide/chapter.slide";
 import { ResumeSlide } from "../slide/resume.slide";
 import { Title } from "../slide-framework/block/title/title.block";
 
-/**
- * 👇
- */
-
-function getPluginSlide1Title(): string {
-  if (window.innerWidth > 400) {
-    return "<code>typescript-strict-plugin</code> 🙌";
-  } else if (window.innerWidth < 400) {
-    return "<code>typescript-strict-plugin</code>";
-  }
-}
-
-/**
- * 👆
- *
- *
- *
- *
- */
-
 const pluginSlide0 = new TitleSlide(
   "<i>Strictness</i> won't save you when the bullets fly",
   "Chapter 1.",
 );
 
 const pluginSlide1 = new Slide([
-  Subtitle.withText(getPluginSlide1Title()),
+  Subtitle.withText("<code>typescript-strict-plugin</code>"),
   Subtitle.withText("<br>"),
   new CodeFromText(`
 /* tsconfig.json */
