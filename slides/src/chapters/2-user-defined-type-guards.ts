@@ -19,6 +19,12 @@ const slidesContent: SlideContent[] = [
     fileName: "is.ts",
   },
   {
+    type: "custom",
+    blocks: [
+      Subtitle.withText("<i>Deprecated</i> tips since <code style='color: deeppink'>typescript@5.5</code>")
+    ]
+  },
+  {
     type: "code",
     title: "<i>asserts</i> Signatures", // With TS 3.7
     fileName: "asserts.ts",
@@ -61,19 +67,19 @@ const slidesContent: SlideContent[] = [
 ];
 
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  */
 
 export const chapter2Slide = Chapter.withSlides(renderSlides(slidesContent));
