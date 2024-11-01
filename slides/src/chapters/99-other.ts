@@ -47,7 +47,7 @@ export const thanksSlide = new Slide([
 ]);
 
 export const openFeedbackSlide = new Slide([
-  Subtitle.withText(`<img style="height: 30vh" src="/openfeedback-qr.png" />`),
+  Subtitle.withText(`<img style="height: 30vh" src="/openfeedback-qr-bdx-io-2024.png" />`),
   Subtitle.withText("<code style='color: deeppink; font-weight: lighter'>@AurelienLoyer</code>"),
   Subtitle.withText("<code style='color: deeppink; font-weight: lighter'>@DelphinAubin</code>"),
 ]);
