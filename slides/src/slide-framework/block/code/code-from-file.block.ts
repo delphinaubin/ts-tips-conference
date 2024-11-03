@@ -6,7 +6,7 @@ export class CodeFromFile extends Code {
 
   override async getCode() {
     const fileContent = await fetchCode(this.fileName, "ts");
-    return fileContent["code"];
+    return fileContent["tsCode"];
 
 
     /**

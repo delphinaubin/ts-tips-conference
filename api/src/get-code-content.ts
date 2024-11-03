@@ -7,24 +7,24 @@ const readFile = util.promisify(fs.readFile);
 export async function getCodeContent(
   fileName: string,
   outputLanguage: string,
-): Promise<{ code: string } | { compiled: TranspileOutput } | null> {
+): Promise<{ tsCode: string } | { jsCode: TranspileOutput } | null> {
   try {
     const codeBuffer = await readFile(`./code-samples/${fileName}`);
-    const code = codeBuffer.toString();
+    const tsCode = codeBuffer.toString();
     if (outputLanguage === "ts") {
       return {
-        code,
+        tsCode,
       };
     }
     if (outputLanguage === "js") {
-      const compiled = ts.transpileModule(code, {
+      const compiled = ts.transpileModule(tsCode, {
         compilerOptions: {
           module: ts.ModuleKind.ESNext,
           target: ts.ScriptTarget.ESNext,
         },
       });
       return {
-        compiled,
+        jsCode: compiled,
       };
     }
   } catch (e) {

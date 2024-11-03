@@ -1,11 +1,11 @@
 import axios from "axios";
 
 export interface JsCode {
-  compiled: { outputText: string };
+  jsCode: { outputText: string };
 }
 
 export interface TsCode {
-  code: string;
+  tsCode: string;
 }
 
 function getFileUrl(file: string, output: "js" | "ts"): string {

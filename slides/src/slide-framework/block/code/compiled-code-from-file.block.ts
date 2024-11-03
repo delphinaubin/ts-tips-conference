@@ -5,7 +5,7 @@ export class CompiledCodeFromFile extends Code {
   override async getCode() {
     const fileContent = await fetchCode(this.fileName, "js");
 
-    return fileContent['compiled']['outputText'];
+    return fileContent['jsCode']['outputText'];
   }
 
   /**
