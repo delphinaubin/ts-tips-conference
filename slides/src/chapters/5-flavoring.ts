@@ -1,8 +1,8 @@
 import { Chapter } from "../slide/chapter.slide";
 import { renderSlides } from "../slide-content/render-slides";
 import { SlideContent } from "../slide-content/slides";
-import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 import { Title } from "../slide-framework/block/title/title.block";
+import { CodeStepsBuilder } from "../slide-framework/block/code/code.block";
 
 const slidesContent: SlideContent[] = [
   {
@@ -21,28 +21,9 @@ const slidesContent: SlideContent[] = [
   },
   {
     type: "code",
-    title: "Flavoring vs Branding",
+    title: "Flavoring",
     fileName: "flavoring-vs-branding.ts",
-    steps: CodeStepsBuilder.createSteps()
-      .addStep("1-3")
-      .addStep("1-5")
-      .addStep("7-9")
-      .addStep("2,8")
-      .addStep("7-9")
-      .addStep("7-11")
-      .build(),
-  },
-  {
-    type: "code",
-    title: "Branding",
-    fileName: "branding.ts",
-    steps: CodeStepsBuilder.createSteps()
-      .addStep("1")
-      .addStep("1-3")
-      .addStep("1-5")
-      .addStep("7")
-      .addStep("7-11")
-      .build(),
+    steps: CodeStepsBuilder.createSteps().addStep("1-5").addStep("1-12").addStep("13-13").build(),
   },
   {
     type: "tsFeature",

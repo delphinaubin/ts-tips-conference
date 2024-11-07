@@ -4,8 +4,12 @@ type UserId = {
 
 const userId: UserId = "42"; // ✅
 
-type ValidUserId = {
-  __type: "ValidUserId";
+type AdminId = {
+  __type?: "AdminId";
 } & string;
 
-const validUser: ValidUserId = "42"; // ❌
+const adminId: AdminId = "42"; // ✅
+
+👉 adminId !== userId
+
+
