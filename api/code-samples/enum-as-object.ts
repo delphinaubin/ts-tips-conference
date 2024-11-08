@@ -1,6 +1,6 @@
 const countries = {
-  ES: "ES",
-  FR: "FR",
+  ES: "Spain",
+  FR: "France",
 } as const;
 
 type Countries = typeof countries;
